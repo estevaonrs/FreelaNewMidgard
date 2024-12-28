@@ -1,0 +1,1302 @@
+body {
+    background-color: #15171e;
+    background-image: url(bgdesktop.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    font-family: 'Urbanist', sans-serif; 
+    font-size: 16px;
+    color: #fff;  
+    margin: 0;
+    padding: 0;
+}
+
+.container-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+}
+
+.container {
+    width: 80%; 
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+}
+
+.container-navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #15171e;
+    background-image: url(bgdesktop.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    position: fixed;
+    padding: 0 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.menu {
+    display: flex;
+    width: 100%; 
+    margin: 0 auto; 
+    align-items: center; 
+    gap: 24px; 
+}
+
+.nav-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1; 
+    margin-left: 100px;
+}
+
+.nav-section a:hover {
+    color: #9c5ce4;  
+}
+
+.nav-section a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #9c5ce4;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-section a:hover::after {
+    transform: scaleX(1);  
+}
+
+
+.action-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end; 
+}
+
+
+.action-section .btn:hover {
+    transform: scale(1.1); 
+    transition: transform 0.3s ease; 
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position: relative; 
+}
+
+
+.menu .btn-entrar .btn-icon {
+    margin-right: 8px; 
+    margin-left: 5px;  
+}
+
+
+.menu .btn-entrar {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    align-items: center;  
+}
+
+
+.menu a {
+    color: #fff;
+}
+
+
+.menu .btn {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+
+.menu .btn-donate {
+    background-color: #9c5ce4; 
+    border: 2px solid white; 
+    color: white; 
+}
+
+.menu .btn-download {
+    background-color: transparent; 
+    border: 2px solid white; 
+    color: white; 
+}
+
+
+.menu .btn-entrar:hover {
+    transform: scale(1.1);  
+    transition: transform 0.3s ease; 
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .hamburger {
+    color: #fff;
+    font-size: 24px;
+}
+
+
+.support-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #9c5ce4;
+    color: #fff;
+    padding: 20px; 
+    width: 20px;  
+    height: 20px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px; 
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.support-button i {
+    font-size: 35px; 
+}
+
+
+.support-button:hover {
+    background-color: #7a46c1; 
+}
+
+
+
+.side-container {
+    position: absolute;  
+    top: 135px;  
+    height: calc(100vh - 535px); 
+    z-index: 2;  
+}
+
+
+.breadcrumb-container {
+    padding: 8px 8px;
+    list-style: none;
+    display: flex;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white; 
+    box-sizing: border-box; 
+}
+
+.breadcrumb {
+    margin: 0;
+    padding: 0;  
+    display: flex;
+    justify-content: flex-start;  
+    width: 100%;  
+}
+
+.breadcrumb-item {
+    display: inline;
+}
+
+.breadcrumb-item i {
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    margin: 0 8px;
+    color: #888;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: #9c5ce4;
+}
+
+.sidebar {
+    color: white;
+}
+
+.sidebar .menu-item {
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.sidebar .menu-item.active {
+    background-color: #9c5ce4;
+    font-weight: bold;
+}
+
+.sidebar .menu-item:hover {
+    background-color: #2c2245;
+}
+
+.sidebar-desktop {
+    display: block; 
+    position: fixed;  
+    height: calc(100vh - 535px); 
+    z-index: 2;  
+}
+
+.sidebar-desktop .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    font-size: 20px;
+    margin-top: 8px;
+}
+
+.sidebar-desktop hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 8px 0;
+}
+
+.sidebar-mobile {
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: space-around; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e2530;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    height: 50px;
+}
+
+.sidebar-mobile .menu-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 4px 8px; 
+    border-radius: 8px; 
+    width: 12%; 
+    font-size: 10px; 
+    color: #fff;
+    text-align: center;
+}
+
+.sidebar-mobile .menu-item i {
+    font-size: 20px; 
+    margin-bottom: 4px; 
+}
+
+.sidebar-mobile .menu-item span {
+    font-size: 10px; 
+    line-height: 1.2; 
+    text-align: center; 
+}
+
+
+.sidebar-mobile .menu-item.active {
+    color: #9c5ce4; 
+    background-color: transparent; 
+    font-weight: bold;
+}
+
+.sidebar-mobile .menu-item.active i {
+    color: #9c5ce4; 
+}
+
+.sidebar-mobile .menu-item.active span {
+    color: #9c5ce4; 
+}
+
+
+.sidebar-mobile .menu-item:hover {
+    color: #ffffff; 
+    background-color: transparent; 
+}
+
+.main-content {
+    margin-top: 155px;
+    padding: 16px;
+    margin-left: 250px;  
+    width: calc(100% - 230px);  
+    min-height: calc(100vh - 110px);  
+}
+
+.main-content h1 {
+    font-size: 28px;
+}
+
+.overview {
+    display: flex;
+    background-color: rgb(28, 28, 52);
+    padding: 8px; 
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+.overview .item {
+    text-align: left;
+    border-radius: 8px;
+    padding: 16px; 
+    flex: 1;
+    font-size: 16px;
+}
+
+.highlight {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.separator {
+    width: 2px;
+    height: 48px; 
+    background-color: #063fb9;
+    margin: 0 16px; 
+}
+
+.subaccounts {
+    margin-top: 16px; 
+}
+
+.subaccounts .header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.subaccounts .header h2 {
+    align-self: flex-start;
+    margin: 0;
+}
+
+.subaccounts .header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.subaccounts .header button {
+    background-color: #9c5ce4;
+    border: 2px solid white;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.subaccounts .header button:hover {
+    transform: scale(1.1);
+}
+
+.subaccounts-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 16px; 
+    padding: 16px;
+}
+
+.subaccount-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #19192e;
+    border-radius: 8px;
+    text-align: center;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+  
+  .subaccount-card::before {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    transform: skewY(-10deg);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  
+  .subaccount-card:hover::before {
+    top: 100%;
+    transition: all 0.75s ease-in-out;
+  }
+  
+  
+  .subaccount-card:hover {
+    transform: scale(1.05);
+    background-color: #202040;
+    box-shadow: 0 2px px rgba(255, 255, 255, 0.2);
+  }
+  
+  
+  .subaccount-card img {
+    border-radius: 50%;
+    margin-bottom: 12px;
+  }
+
+  .subaccount-card .a {
+    text-decoration: none;
+  }
+
+.subaccount-card img {
+    max-width: 190px;
+    border-radius: 8px;
+}
+
+.subaccount-card .info {
+    margin-top: 16px;
+    flex-grow: 1; 
+}
+
+.subaccount-card .name {
+    font-size: 16px;
+    color: white;
+}
+
+.subaccount-card .highlight {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+footer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    text-align: left;
+}
+
+footer a {
+    margin: 0 16px; 
+    text-decoration: none;
+    color: white;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    transition: all 0.3s ease; 
+    background-color: transparent; 
+}
+
+.theme-toggle:hover{
+    transform: scale(1.1);  
+}
+
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+    font-size: 24px; 
+    color: white; 
+    position: absolute;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.theme-toggle .sun-icon.active {
+    opacity: 1; 
+}
+
+.theme-toggle .moon-icon.active {
+    opacity: 1; 
+}
+
+#footer {
+    padding: 40px 0 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgb(28, 28, 52);
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+#footer p {
+    font-size: 14px;
+}
+
+.footer-top {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    color: #fff; 
+
+}
+
+.footer-links :hover {
+    color: #9c5ce4;  
+}
+
+.footer-links li {
+    margin-right: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+}
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid rgb(255, 255, 255);
+    margin: 20px 0;
+}
+
+.is_dark #footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-info {
+    flex: 2;
+    text-align: center;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-icons li {
+    margin-left: 15px;
+}
+
+.social-icons a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: #fff; 
+}
+
+
+.social-icons a:hover i {
+    color: #9c5ce4; 
+}
+
+
+body.light-mode {
+    background-color: white;
+    color: #8c4830;
+    background-image: none;
+}
+
+
+body.light-mode .breadcrumb {
+    border-radius: 5px; 
+}
+
+body.light-mode .breadcrumb-item i {
+    color: #8c4830; 
+}
+
+body.light-mode .breadcrumb-item + .breadcrumb-item::before {
+    content: "›"; 
+    color: #8c4830; 
+}
+
+body.light-mode .breadcrumb-item a {
+    text-decoration: none; 
+    color: #8c4830; 
+}
+
+body.light-mode .breadcrumb-item a:hover {
+    text-decoration: underline; 
+    color: #6a351f; 
+}
+
+body.light-mode .breadcrumb-item.active {
+    color: #ecc474; 
+}
+
+
+body.light-mode .support-button {
+    background-color: #8c4830; 
+    color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+body.light-mode .support-button:hover {
+    background-color: #6a351f; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+body.light-mode .container-navbar, 
+body.light-mode .container-footer {
+    background-color: #8c4830;
+    background-image: none;
+}
+
+body.light-mode .navbar .menu a {
+    color: white;
+}
+
+body.light-mode .sidebar-desktop {
+    background-color: transparent;
+}
+
+body.light-mode .sidebar-desktop .menu-item {
+    color: #8c4830;
+}
+
+body.light-mode .sidebar-desktop .menu-item:hover {
+    background-color: #8c4830;
+    color: white;
+}
+
+body.light-mode .sidebar .menu-item.active {
+    background-color: #ecc474;
+}
+
+body.light-mode .sidebar-mobile {
+    background-color: #8c4830;
+}
+
+body.light-mode .sidebar-mobile .menu-item:hover {
+    background-color: #8c4830;
+    color: white;
+}
+
+body.light-mode .sidebar-mobile .menu-item.active i {
+    color: #ecc474;
+}
+
+body.light-mode .sidebar-mobile .menu-item.active span {
+    color: #ecc474;
+}
+
+body.light-mode .sidebar-mobile .menu-item {
+    color: white;
+}
+
+body.light-mode .overview {
+    background-color: #8c4830;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+
+body.light-mode .overview .item {
+    color: white;
+    padding: 16px; 
+}
+
+body.light-mode .overview .item .highlight {
+    color: white;
+}
+
+body.light-mode .menu .btn-donate {
+    background-image: url(assets/images/dourado.webp);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border: 2px solid white; 
+    color: white; 
+}
+
+body.light-mode .subaccount-card {
+    background-image: url(assets/images/dourado.webp);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding: 16px; 
+    border-radius: 8px;
+    text-align: center;
+    max-width: 250px;
+    box-shadow: 0 0 1px 1px rgba(140, 72, 48, 0.3); 
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+body.light-mode .subaccount-card .info .highlight {
+    color: white;
+}
+
+body.light-mode .subaccounts .header button {
+    background-image: url(assets/images/dourado.webp);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border: 2px solid #8c4830; 
+    padding: 8px 16px; 
+    color: white; 
+    cursor: pointer;
+    border-radius: 20px; 
+    font-size: 16px; 
+}
+
+body.light-mode .separator {
+    width: 2px;
+    height: 48px; 
+    background-color: white;
+    margin: 0 16px; 
+}
+
+body.light-mode #footer {
+    padding: 40px 0 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #8c4830;
+}
+
+body.light-mode .footer-info p{
+    color: white;
+}
+
+body.light-mode .footer-links :hover {
+    color: #ecc474;  
+}
+
+body.light-mode .social-icons a:hover i {
+    color: #ecc474; 
+}
+
+body.light-mode .nav-section {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex: 1; 
+    margin-left: 100px;
+}
+
+body.light-mode .nav-section a:hover {
+    color: #6a351f;
+}
+
+body.light-mode .nav-section a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ecc474;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+body.light-mode .nav-section a:hover::after {
+    transform: scaleX(1);
+}
+
+body.light-mode .action-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+body.light-mode .action-section .btn:hover {
+    transform: scale(1.1);
+}
+
+body.light-mode .menu a {
+    text-decoration: none;
+    color: #8c4830;
+    position: relative;
+}
+
+@media (min-width: 769px) {
+    .navbar .menu-toggle {
+        display: none;
+    }
+
+    .sidebar .menu-item i{
+        margin-right: 15px;
+        font-size: 18px; 
+        line-height: 1; 
+    }
+
+    .sidebar-desktop {
+        display: block; 
+    }
+
+    .sidebar-mobile {
+        display: none; 
+    }
+}
+
+@media (max-width: 768px) {
+    
+    
+    .container {
+        width: 100%;
+        padding: 0 16px; 
+        box-sizing: border-box; 
+    }
+
+    .breadcrumb-container {
+        list-style: none;
+        display: flex;
+        font-size: 20px;
+        border-radius: 5px;
+        color: white; 
+        box-sizing: border-box; 
+    }
+
+    .side-container {
+        position: absolute;  
+        top: 90px;  
+        left: 30px;
+        height: 40px;
+    }
+
+
+    .container-navbar {
+        width: 100%;
+        position: fixed;
+        background-color: #000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+        position: unset;
+    }
+
+    .navbar .logo img {
+        max-width: 100px;
+    }
+
+    .navbar .menu-toggle {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 24px;
+        right: 40px;
+        cursor: pointer;
+    }
+
+    .navbar .hamburger,
+    .navbar .close-icon {
+        font-size: 24px;
+        color: #fff;
+        display: none;
+    }
+
+    .navbar .menu-toggle.active .hamburger {
+        display: none;
+    }
+
+    .navbar .menu-toggle.active .close-icon {
+        display: block;
+    }
+
+    .navbar .hamburger {
+        display: block;
+    }
+
+    .navbar .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        left: 0; 
+        width: 100vw; 
+        height: calc(100vh - 100%); 
+        background-color: rgb(28, 28, 52);
+        z-index: 999;
+        padding: 0;
+        margin: 0; 
+    }
+
+    body.light-mode .navbar .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        left: 0; 
+        width: 100vw; 
+        height: calc(100vh - 100%); 
+        background-color: #8c4830;
+        z-index: 999;
+        padding: 0;
+        margin: 0; 
+    }
+
+    body.light-mode .navbar .menu.active {
+        display: flex;
+    }
+
+    body.light-mode .sidebar .menu-item.active {
+        background-color: transparent;
+    }
+
+    .navbar .menu.active {
+        display: flex;
+    }
+
+    .navbar .nav-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 16px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    body.light-mode .navbar .nav-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 16px;
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .navbar .nav-section a {
+        text-decoration: none;
+        color: white;
+        padding: 12px 8px;
+        width: 350px; 
+        transition: background-color 0.3s;
+    }
+
+    .navbar .nav-section a:not(:last-child) {
+        border-bottom: 1px solid #444; 
+    }
+
+    .theme-toggle {
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+        margin-right: 330px;
+    }
+
+    
+    body.light-mode .navbar .nav-section a:not(:last-child) {
+        border-bottom: 1px solid white; 
+    }
+
+    .navbar .nav-section a:hover {
+        background-color: #3a4754;
+        color: #9c5ce4;
+    }
+
+    
+    .navbar .action-section a {
+        padding: 12px 16px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar .action-section {
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+        margin-bottom: 300px;
+        width: 350px;
+
+    }
+
+    .navbar .btn-download {
+        background: transparent; 
+        color: white; 
+        border: 2px solid #9c5ce4; 
+        padding: 12px 24px; 
+        text-align: center;
+        border-radius: 8px;
+        text-transform: uppercase;
+        width: 100%;
+        transition: background-color 0.3s, color 0.3s; 
+    }
+
+    body.light-mode .navbar .btn-download {
+        background: transparent; 
+        color: white; 
+        border: 2px solid white; 
+        text-align: center;
+        border-radius: 8px;
+        text-transform: uppercase;
+        width: 100%;
+        transition: background-color 0.3s, color 0.3s; 
+    }
+
+    .navbar .btn-donate {
+        background: transparent; 
+        color: white; 
+        border: 2px solid #9c5ce4; 
+        padding: 12px 24px; 
+        text-align: center;
+        border-radius: 8px;
+        text-transform: uppercase;
+        width: 100%;
+        transition: background-color 0.3s, color 0.3s; 
+    }
+
+    .navbar .btn-entrar {
+        background: transparent; 
+        color: white; 
+        border: 2px solid white; 
+        padding: 12px 24px; 
+        text-align: center;
+        border-radius: 8px;
+        text-transform: uppercase;
+        width: 100%;
+        transition: background-color 0.3s, color 0.3s; 
+    }
+
+    .navbar .btn:hover {
+        background: #7a4fbb;
+    }
+
+    .sidebar-desktop {
+        display: none; 
+    }
+
+    .sidebar-mobile {
+        display: flex; 
+    }
+
+    footer {
+        display: none;
+    }
+
+    
+    .main-content {
+        margin: 2px; 
+        padding: 16px;
+        width: 100%; 
+        box-sizing: border-box;
+        padding-top: 120px;
+        padding-bottom: 112px; 
+    }
+
+    .container-content {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+    }
+
+    .main-content h1 {
+        font-size: 24px;
+    }
+
+    .overview {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .overview .item {
+        flex: 1 1 48%;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .overview .item .highlight {
+        font-size: 16px;
+    }
+
+    .overview .separator {
+        display: none;
+    }
+
+    .subaccounts-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 16px;
+        padding: 0 16px; 
+        justify-items: center;
+        align-items: start;
+        width: 100%; 
+        box-sizing: border-box;
+    }
+
+    .subaccounts .header h2 {
+        font-size: 20px;
+        text-align: center; 
+    }
+
+    .subaccount-card {
+        background-color: #2a3347;
+        border-radius: 16px;
+        text-align: center;
+        padding: 16px;
+        width: 100%; 
+        max-width: 100%; 
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-sizing: border-box;
+    }
+
+    .subaccount-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .subaccount-card img {
+        max-width: 100%; 
+        border-radius: 16px;
+    }
+
+    .subaccount-card .info {
+        margin-top: 16px;
+        color: #fff;
+        font-size: 14px; 
+    }
+
+    .subaccount-card .name {
+        font-size: 18px; 
+        font-weight: bold;
+        margin-bottom: 8px; 
+        color: #fff; 
+    }
+
+    .subaccount-card .highlight {
+        font-size: 14px;
+        color: #bbb;
+    }
+
+    .subaccount-card .highlight {
+        font-size: 16px;
+        color: #bbb;
+    }
+
+    .subaccounts .header button {
+        padding: 8px 14px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .subaccounts .header {
+        gap: 16px;
+    }
+
+    .subaccounts .header-buttons {
+        gap: 100px;
+    }
+
+    
+
+    body.light-mode .subaccounts .header button {
+        padding: 8px 14px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    body.light-mode .subaccounts .header {
+        gap: 16px;
+    }
+
+    body.light-mode .subaccounts .header-buttons {
+        gap: 100px;
+    }
+
+    .support-button {
+        padding: 15px; 
+        width: 20px;  
+        height: 20px; 
+        bottom: 70px; 
+        right: 16px; 
+    }
+
+    .support-button i {
+        font-size: 20px; 
+    }
+}
+
