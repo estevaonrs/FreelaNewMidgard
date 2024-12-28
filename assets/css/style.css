@@ -1,6 +1,6 @@
 body {
     background-color: #15171e;
-    background-image: url(bgdesktop.svg);
+    background-image: url('../images/bgdesktop.svg');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -32,7 +32,8 @@ body {
     display: flex;
     justify-content: center;
     background-color: #15171e;
-    background-image: url(bgdesktop.svg);
+
+    background-image: url('../images/bgdesktop.svg');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -228,6 +229,8 @@ body {
     display: flex;
     justify-content: flex-start;  
     width: 100%;  
+    flex-wrap: wrap;
+
 }
 
 .breadcrumb-item {
@@ -254,7 +257,8 @@ body {
     text-decoration: underline;
 }
 
-.breadcrumb-item.active {
+
+.breadcrumb-item.active a {
     color: #9c5ce4;
 }
 
@@ -293,6 +297,11 @@ body {
     margin-top: 8px;
 }
 
+.sidebar-desktop .menu-item a {
+    text-decoration: none;
+    color: white;
+}
+
 .sidebar-desktop hr {
     border: 0;
     border-top: 1px solid #444;
@@ -328,14 +337,19 @@ body {
 .sidebar-mobile .menu-item i {
     font-size: 20px; 
     margin-bottom: 4px; 
+    line-height: 1.2; /* Garante que o ícone fique acima da letra */
 }
 
 .sidebar-mobile .menu-item span {
-    font-size: 10px; 
+    font-size: 13px; 
     line-height: 1.2; 
     text-align: center; 
 }
 
+.sidebar-mobile .menu-item a {
+    color: #fff; 
+    text-decoration: none; /* Remove o sublinhado */
+}
 
 .sidebar-mobile .menu-item.active {
     color: #9c5ce4; 
@@ -351,14 +365,13 @@ body {
     color: #9c5ce4; 
 }
 
-
 .sidebar-mobile .menu-item:hover {
     color: #ffffff; 
     background-color: transparent; 
 }
 
 .main-content {
-    margin-top: 155px;
+    margin-top: 145px;
     padding: 16px;
     margin-left: 250px;  
     width: calc(100% - 230px);  
@@ -678,6 +691,11 @@ body.light-mode .breadcrumb {
     border-radius: 5px; 
 }
 
+body.light-mode .sidebar-desktop .menu-item a {
+    text-decoration: none;
+    color: #8c4830;
+}
+
 body.light-mode .breadcrumb-item i {
     color: #8c4830; 
 }
@@ -697,10 +715,19 @@ body.light-mode .breadcrumb-item a:hover {
     color: #6a351f; 
 }
 
-body.light-mode .breadcrumb-item.active {
+body.light-mode .breadcrumb-item.active a{
     color: #ecc474; 
 }
 
+body.light-mode .breadcrumb-container {
+    padding: 8px 8px;
+    list-style: none;
+    display: flex;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #8c4830; 
+    box-sizing: border-box; 
+} 
 
 body.light-mode .support-button {
     background-color: #8c4830; 
@@ -734,7 +761,7 @@ body.light-mode .sidebar-desktop .menu-item {
 }
 
 body.light-mode .sidebar-desktop .menu-item:hover {
-    background-color: #8c4830;
+    background-color: #ecc474;
     color: white;
 }
 
@@ -780,7 +807,7 @@ body.light-mode .overview .item .highlight {
 }
 
 body.light-mode .menu .btn-donate {
-    background-image: url(assets/images/dourado.webp);
+    background-image: url('../images/dourado.webp');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -789,7 +816,7 @@ body.light-mode .menu .btn-donate {
 }
 
 body.light-mode .subaccount-card {
-    background-image: url(assets/images/dourado.webp);
+    background-image: url('../images/dourado.webp');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -808,7 +835,7 @@ body.light-mode .subaccount-card .info .highlight {
 }
 
 body.light-mode .subaccounts .header button {
-    background-image: url(assets/images/dourado.webp);
+    background-image: url('../images/dourado.webp');
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -1160,7 +1187,7 @@ body.light-mode .menu a {
         padding: 16px;
         width: 100%; 
         box-sizing: border-box;
-        padding-top: 120px;
+        padding-top: 140px;
         padding-bottom: 112px; 
     }
 

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Conta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container-navbar">
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span class="hamburger"><i class="fas fa-bars"></i></span>
+            <span class="close-icon"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="menu" id="mobileMenu">
+            <!-- Seção de Navegação (Tabs) -->
+            <div class="nav-section">
+                <a href="0.html" class="tab-link">Wiki</a>
+                <a href="teste.html" class="tab-link active">Database</a>
+                <a href="#" class="tab-link">Rankings</a>
+                <a href="#" class="tab-link">Informações</a>
+                <a href="#" class="tab-link">Mercado</a>
+            </div>
+            <!-- Seção de Ação -->
+            <div class="action-section">
+                <div class="theme-toggle">
+                    <i class="fa-solid fa-sun sun-icon active"></i>
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                </div>
+                <a href="#" class="btn btn-donate">Doar</a>
+                <a href="#" class="btn btn-download">Baixar</a>
+                <a href="#" class="btn btn-entrar">
+                        <i class="fa-solid fa-user"></i> estevaonrs
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container-content">
+
+        <div class="side-container">
+            <div class="breadcrumb-container">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><i class="fa-regular fa-compass"></i></li>
+                    <li class="breadcrumb-item"<a href="index.html">estevaonrs</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="indicacoes.html">indicações</a></li>
+                </ol>
+            </div>
+
+            <div class="sidebar sidebar-desktop">
+                <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Conta de estevaonrs</a></div>
+                <hr>
+                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-user"></i> Subcontas</a></div>
+                <div class="menu-item"><a href="indicacoes.html"><i class="fas fa-users"></i> Indicações</a></div>
+                <div class="menu-item"><a href="votos.html"><i class="fas fa-check"></i> Votos</a></div>
+                <div class="menu-item"><a href="doacoes.html"><i class="fas fa-donate"></i> Doações</a></div>
+                <div class="menu-item"><a href="perfil.html"><i class="fa-solid fa-ticket"></i> Perfil</a></div>
+            </div>
+
+            <div class="sidebar sidebar-mobile">
+                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-user"></i><span>Subcontas</span></a></div>
+                <div class="menu-item active"><a href="indicacoes.html"><i class="fas fa-users"></i><span>Indicações</span></a></div>
+                <div class="menu-item"><a href="votos.html"><i class="fas fa-check"></i><span>Votos</span></a></div>
+                <div class="menu-item"><a href="doacoes.html"><i class="fas fa-donate"></i><span>Doações</span></a></div>
+                <div class="menu-item"><a href="perfil.html"><i class="fa-solid fa-ticket"></i><span>Perfil</span></a></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h1>Indicações</h1>
+        </div>
+    </div>
+
+    <a href="#suporte" class="support-button">
+        <i class="fas fa-headset"></i>
+    </a>
+
+    <footer id="footer" class="footer-dark">
+        <div class="container">
+            <div class="footer-top d-flex justify-content-between align-items-center">
+                <ul class="footer-links d-flex">
+                    <li><a href="{{ route('home') }}">Início</a></li>
+                    <li><a href="{{ route('home') }}">Informações</a></li>
+                    <li><a href="{{ route('downloads') }}">Downloads</a></li>
+                    <li><a href="https://newmidgard.ragnarokdatabase.com/" target="_blank">Database</a></li>
+                    <li><a href="{{ route('downloads') }}">Mercado</a></li>
+                </ul>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-middle d-flex justify-content-between align-items-center">
+                <div class="footer-logo d-flex align-items-center">
+                    <a href="https://bmcoder.com.br/" target="_blank"><img src="assets/images/logofooter.png" alt="Logo" width="150" class="me-3"></a>
+                </div>
+                
+                <div class="footer-info text-center">
+                    <img src="assets/images/auroralogo.png" id="logo_footer" alt="Aurora Panel Logo" width="250" class="mb-2">
+                    <p>CONTROLE SUA JORNADA ÉPICA - BY NAKYO</p>
+                    <p>Copyright © <?php echo date("Y"); ?></p>
+                </div>
+
+                <ul class="social-icons d-flex">
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-reddit"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.getItem('theme') === 'light') {
+                body.classList.add('light-mode');
+                sunIcon.classList.add('active');
+                moonIcon.classList.remove('active');
+            }
+            });
+
+            themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            sunIcon.classList.toggle('active');
+            moonIcon.classList.toggle('active');
+
+            if (body.classList.contains('light-mode')) {
+                localStorage.setItem('theme', 'light');
+            } else {
+                localStorage.removeItem('theme');
+            }
+        })
+
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.menu-toggle');
+            menu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+    </script>
+</body>
+</html>

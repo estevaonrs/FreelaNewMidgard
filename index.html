@@ -6,13 +6,15 @@
     <title>Painel de Conta</title>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="0.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
     <div class="container-navbar">
     <div class="navbar">
         <div class="logo">
-            <img src="assets/images/logo.png" alt="Logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
         </div>
         <div class="menu-toggle" onclick="toggleMenu()">
             <span class="hamburger"><i class="fas fa-bars"></i></span>
@@ -26,17 +28,17 @@
                 <a href="#" class="tab-link">Rankings</a>
                 <a href="#" class="tab-link">Informações</a>
                 <a href="#" class="tab-link">Mercado</a>
+            </div>
+            <!-- Seção de Ação -->
+            <div class="action-section">
                 <div class="theme-toggle">
                     <i class="fa-solid fa-sun sun-icon active"></i>
                     <i class="fa-solid fa-moon moon-icon"></i>
                 </div>
-            </div>
-            <!-- Seção de Ação -->
-            <div class="action-section">
                 <a href="#" class="btn btn-donate">Doar</a>
                 <a href="#" class="btn btn-download">Baixar</a>
                 <a href="#" class="btn btn-entrar">
-                    <i class="fa-solid fa-arrow-right-to-bracket btn-icon"></i> Entrar
+                        <i class="fa-solid fa-user"></i> estevaonrs
                 </a>
             </div>
         </div>
@@ -46,33 +48,29 @@
     <div class="container-content">
 
         <div class="side-container">
-            <!-- Breadcrumb -->
             <div class="breadcrumb-container">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><i class="fa-regular fa-compass"></i></li>
-                    <li class="breadcrumb-item"><a href="#">estevaonrs</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">subcontas</li>
+                    <li class="breadcrumb-item active" aria-current="page"> <a href="#">estevaonrs</a></li>
                 </ol>
             </div>
 
-            <!-- Sidebar Desktop -->
             <div class="sidebar sidebar-desktop">
-                <div class="menu-item"><i class="fa-solid fa-gamepad"></i> Conta de estevaonrs</div>
+                <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Conta de estevaonrs</a></div>
                 <hr>
-                <div class="menu-item active"><i class="fa-solid fa-user"></i> Subcontas</div>
-                <div class="menu-item"><i class="fas fa-users"></i> Indicações</div>
-                <div class="menu-item"><i class="fas fa-check"></i> Votos</div>
-                <div class="menu-item"><i class="fas fa-donate"></i> Doações</div>
-                <div class="menu-item"><i class="fa-solid fa-ticket"></i> Perfil</div>
+                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-user"></i> Subcontas</a></div>
+                <div class="menu-item"><a href="indicacoes.html"><i class="fas fa-users"></i> Indicações</a></div>
+                <div class="menu-item"><a href="votos.html"><i class="fas fa-check"></i> Votos</a></div>
+                <div class="menu-item"><a href="doacoes.html"><i class="fas fa-donate"></i> Doações</a></div>
+                <div class="menu-item"><a href="perfil.html"><i class="fa-solid fa-ticket"></i> Perfil</a></div>
             </div>
 
-            <!-- Sidebar Mobile -->
             <div class="sidebar sidebar-mobile">
-                <div class="menu-item active"><i class="fa-solid fa-user"></i><span>Subcontas</span></div>
-                <div class="menu-item"><i class="fas fa-users"></i><span>Indicações</span></div>
-                <div class="menu-item"><i class="fas fa-check"></i><span>Votos</span></div>
-                <div class="menu-item"><i class="fas fa-donate"></i><span>Doações</span></div>
-                <div class="menu-item"><i class="fa-solid fa-ticket"></i><span>Passes</span></div>
+                <div class="menu-item active"><a href="subcontas.html"><i class="fa-solid fa-user"></i><span>Subcontas</span></a></div>
+                <div class="menu-item"><a href="indicacoes.html"><i class="fas fa-users"></i><span>Indicações</span></a></div>
+                <div class="menu-item"><a href="votos.html"><i class="fas fa-check"></i><span>Votos</span></a></div>
+                <div class="menu-item"><a href="doacoes.html"><i class="fas fa-donate"></i><span>Doações</span></a></div>
+                <div class="menu-item"><a href="perfil.html"><i class="fa-solid fa-ticket"></i><span>Perfil</span></a></div>
             </div>
         </div>
 
@@ -227,13 +225,28 @@
     <script>
         const themeToggle = document.querySelector('.theme-toggle');
         const body = document.body;
+        const sunIcon = document.querySelector('.sun-icon');
+        const moonIcon = document.querySelector('.moon-icon');
+
+        window.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            sunIcon.classList.add('active');
+            moonIcon.classList.remove('active');
+        }
+        });
 
         themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-mode');
+        body.classList.toggle('light-mode');
+        sunIcon.classList.toggle('active');
+        moonIcon.classList.toggle('active');
 
-            document.querySelector('.sun-icon').classList.toggle('active');
-            document.querySelector('.moon-icon').classList.toggle('active');
-        });
+        if (body.classList.contains('light-mode')) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.removeItem('theme');
+        }
+        })
 
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
