@@ -52,32 +52,28 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><i class="fa-regular fa-compass"></i></li>
                     <li class="breadcrumb-item"><a href="index.html">estevaonrs</a></li>
-                    <li class="breadcrumb-item"><a href="index.html">subcontas</a></li>
-                    <li class="breadcrumb-item active" aria-current="page"><a href="index.html">conquistas</a></li>
+                    <li class="breadcrumb-item"><a href="subcontas.html">subcontas</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><a href="subcontas.html">personagens</a></li>
                 </ol>
             </div>
 
             <div class="sidebar sidebar-desktop">
-                <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Conta de estevaonrs</a></div>
+                <div class="menu-item"><a href="personagens.html"><i class="fa-solid fa-gamepad"></i> Personagens</a></div>
                 <hr>
-                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-user"></i> Personagens</a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fas fa-users"></i> Coleção</a></div>
-                <div class="menu-item active"><a href="conquistas.html"><i class="fas fa-check"></i> Conquistas</a></div>
-                <div class="menu-item"><a href="passes.html"><i class="fas fa-donate"></i> Passes</a></div>
-                <div class="menu-item"><a href="quests.html"><i class="fa-solid fa-ticket"></i> Quests</a></div>
+                <div class="menu-item"><a href="atributos.html"><i class="fa-solid fa-gears"></i> Atributos</a></div>
+                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i> Coleção</a></div>
+                <div class="menu-item"><a href="equipamentos.html"><i class="fa-solid fa-toolbox"></i></i> Equipamentos</a></div>
             </div>
 
             <div class="sidebar sidebar-mobile">
-                <div class="menu-item"><a href="personagens.html"><i class="fa-solid fa-users"></i><span>Personagens</span></a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i><span>Coleção</span></a></div>
-                <div class="menu-item"><a href="passes.html"><i class="fas fa-donate"></i><span>Passes</span></a></div>
-                <div class="menu-item"><a href="quests.html"><i class="fa-solid fa-ticket"></i><span>Quests</span></a></div>
-                <div class="menu-item active"><a href="conquistas.html"><i class="fas fa-check"></i><span>Conquistas</span></a></div>
+                <div class="menu-item"><a href="atributos.html"><i class="fa-solid fa-gears"></i><span>Atributos</span></a></div>
+                <div class="menu-item"><a href="passes.html"><i class="fa-solid fa-toolbox"></i><span>Equipamentos</span></a></div>
+                <div class="menu-item"><a href="equipamentos.html"><i class="fa-solid fa-box"></i><span>Coleção</span></a></div>
             </div>
         </div>
 
         <div class="main-content">
-            <h1>Conquistas</h1>
+            <h1>Personagens</h1>
             <div class="overview">
                 <div class="item">Personagens<br><span class="highlight">150</span></div>
                 <div class="separator"></div>
@@ -133,25 +129,24 @@
         const moonIcon = document.querySelector('.moon-icon');
 
         window.addEventListener('DOMContentLoaded', () => {
-            if (localStorage.getItem('theme') === 'light') {
-                body.classList.add('light-mode');
-                sunIcon.classList.add('active');
-                moonIcon.classList.remove('active');
-            }
-            });
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            sunIcon.classList.add('active');
+            moonIcon.classList.remove('active');
+        }
+        });
 
-            themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-mode');
-            sunIcon.classList.toggle('active');
-            moonIcon.classList.toggle('active');
+        themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        sunIcon.classList.toggle('active');
+        moonIcon.classList.toggle('active');
 
-            if (body.classList.contains('light-mode')) {
-                localStorage.setItem('theme', 'light');
-            } else {
-                localStorage.removeItem('theme');
-            }
+        if (body.classList.contains('light-mode')) {
+            localStorage.setItem('theme', 'light');
+        } else {
+            localStorage.removeItem('theme');
+        }
         })
-
 
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
