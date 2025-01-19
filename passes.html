@@ -29,15 +29,15 @@
                     <a href="#" class="tab-link">Mercado</a>
                 </div>
                 <div class="action-section">
-                    <div class="theme-toggle">
-                        <i class="fa-solid fa-sun sun-icon active"></i>
-                        <i class="fa-solid fa-moon moon-icon"></i>
-                    </div>
+         
                     <a href="#" class="btn btn-donate">Doar</a>
                     <a href="#" class="btn btn-download">Baixar</a>
                     <a href="#" class="btn btn-entrar">
                         <i class="fa-solid fa-user"></i> estevaonrs
-                    </a>
+                    </a><div class="theme-toggle">
+                        <i class="fa-solid fa-sun sun-icon active"></i>
+                        <i class="fa-solid fa-moon moon-icon"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,23 +56,36 @@
             </div>
 
             <div class="sidebar sidebar-desktop">
-                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-gamepad"></i> Subcontas</a></div>
+                <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Subcontas</a></div>
                 <hr>
-                <div class="menu-item active"><a href="passes.html"><i class="fas fa-donate"></i> Passe de batalha</a></div>
-                <div class="menu-item"><a href="passe_evento.html"><i class="fa-solid fa-ticket"></i> Passe de evento</a></div>
-                <div class="menu-item"><a href="passe_personagem.html"><i class="fa-solid fa-check"></i> Passe de personagem</a></div>
+                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-users"></i> Personagens</a></div>
+                <div class="menu-item"><a href="conquistas.html"><i class="fa-solid fa-trophy"></i> Conquistas</a></div>
+                <div class="menu-item active"><a href="passes.html"><i class="fas fa-donate"></i> Passes</a></div>
+                <div class="menu-item"><a href="quests.html"><i class="fa-solid fa-ticket"></i> Quests</a></div>
             </div>
 
             <div class="sidebar sidebar-mobile">
                 <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-users"></i><span>Personagens</span></a></div>
-                <div class="menu-item active"><a href="passes.html"><i class="fas fa-donate"></i><span>Batalha</span></a></div>
-                <div class="menu-item"><a href="passe_evento.html"><i class="fa-solid fa-ticket"></i><span>Evento</span></a></div>
-                <div class="menu-item"><a href="passe_personagem.html"><i class="fas fa-check"></i><span>Personagem</span></a></div>
+                <div class="menu-item active"><a href="passes.html"><i class="fas fa-donate"></i><span>Passes</span></a></div>
+                <div class="menu-item"><a href="quests.html"><i class="fa-solid fa-ticket"></i><span>Quests</span></a></div>
+                <div class="menu-item"><a href="conquistas.html"><i class="fas fa-check"></i><span>Conquistas</span></a></div>
             </div>
         </div>
 
         <div class="main-content">
-            <h1>Passe de batalha</h1>
+            <div class="title-container">
+                <h1>Selecione seu passe </h1>
+                <div class="dropdown">
+                    <button class="dropdown-toggle">
+                        <img src="assets/images/dropdown.png" alt="Dropdown">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Passe de Batalha</a></li>
+                        <li><a href="#">Passe de Evento</a></li>
+                        <li><a href="#">Passe de Personagem</a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="overview">
                 <div class="item">Personagens<br><span class="highlight">150</span></div>
                 <div class="separator"></div>
@@ -81,209 +94,85 @@
 
             <div class="progress-bar-container">
                 <div class="progress-bar"></div>
-                <span class="progress-text">10%</span> <!-- Porcentagem de progresso -->
-                <div class="progress-end">100%</div> <!-- Indicação de 100% -->
+                <span class="progress-text">10%</span>
+            </div>
+            <div class="header">
+                    <h2>Passe de Batalha</h2>
             </div>
             <div class="grid">
+                <div id="rescueModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-inner-content">
+                            <img src="assets/images/swal-success.png" alt="Sucesso" class="modal-success-image">
+                            <p class="modal-question">Item resgatado com sucesso.</p>
+                            <div class="modal-buttons">
+                                <button class="action-appearence-button" onclick="closeModal('rescueModal')">Legal!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="card">
                     <div class="card-image">
-                    <img src="assets/images/collection/teste.bmp" alt="Imagem do item">
+                        <img src="assets/images/collection/teste.bmp" alt="Imagem do item">
                     </div>
                     <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button class="rescued">Resgatado</button>
+                        <p>Elmo de batalha</p>
+                        <span class="level">Nível 1</span>
+                        <button class="rescued">Resgatado</button>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-image">
-                    <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
+                        <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
                     </div>
                     <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
+                        <p>Elmo de batalha</p>
+                        <span class="level">Nível 2</span>
+                        <button id="btn-rescue-1" onclick="openModal('rescueModal', 'btn-rescue-1')">Resgatar</button>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-image">
-                    <img src="assets/images/collection/teste4.bmp" alt="Imagem do item">
+                        <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
                     </div>
                     <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
+                        <p>Elmo de batalha</p>
+                        <span class="level">Nível 2</span>
+                        <button id="btn-rescue-3" onclick="openModal('rescueModal', 'btn-rescue-3')">Resgatar</button>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-image">
-                    <img src="assets/images/collection/teste3.bmp" alt="Imagem do item">
+                        <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
                     </div>
                     <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
+                        <p>Elmo de batalha</p>
+                        <span class="level">Nível 2</span>
+                        <button id="btn-rescue-3" onclick="openModal('rescueModal', 'btn-rescue-3')">Resgatar</button>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-image">
-                    <img src="assets/images/collection/teste2.bmp" alt="Imagem do item">
+                        <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
                     </div>
                     <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
+                        <p>Elmo de batalha</p>
+                        <span class="level">Nível 2</span>
+                        <button id="btn-rescue-3" onclick="openModal('rescueModal', 'btn-rescue-3')">Resgatar</button>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-image">
-                    <img src="assets/images/collection/teste.bmp" alt="Imagem do item">
+                        <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
                     </div>
                     <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
+                        <p>Elmo de batalha</p>
+                        <span class="level">Nível 2</span>
+                        <button id="btn-rescue-3" onclick="openModal('rescueModal', 'btn-rescue-3')">Resgatar</button>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste4.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste3.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste2.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste4.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste3.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste2.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste4.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste3.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste2.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste4.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste5.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-image">
-                    <img src="assets/images/collection/teste2.bmp" alt="Imagem do item">
-                    </div>
-                    <div class="card-content">
-                    <p>Elmo de batalha</p>
-                    <button>Resgatar</button>
-                    </div>
-                </div>
-            </div>  
+            </div>
         </div>
     </div>
 
@@ -364,6 +253,48 @@
         document.querySelector('.progress-text').innerText = progress + '%';
 
         document.querySelector('.progress-text').style.left = progress + '%';
+
+        let currentButtonId = null;
+
+        function openModal(modalId, buttonId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                document.getElementById(modalId).style.display = 'flex';
+                currentButtonId = buttonId;
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+
+            if (currentButtonId) {
+                const button = document.getElementById(currentButtonId);
+                if (button) {
+                    button.textContent = 'Resgatado';
+                    button.className = 'rescued';
+                    button.onclick = null;
+                }
+            }
+        }
+
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdown = document.querySelector('.dropdown');
+
+        dropdownToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', () => {
+            dropdown.classList.remove('show');
+        });
+
+        dropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });     
 
     </script>
 </body>

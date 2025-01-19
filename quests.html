@@ -29,15 +29,15 @@
                     <a href="#" class="tab-link">Mercado</a>
                 </div>
                 <div class="action-section">
-                    <div class="theme-toggle">
-                        <i class="fa-solid fa-sun sun-icon active"></i>
-                        <i class="fa-solid fa-moon moon-icon"></i>
-                    </div>
+         
                     <a href="#" class="btn btn-donate">Doar</a>
                     <a href="#" class="btn btn-download">Baixar</a>
                     <a href="#" class="btn btn-entrar">
                         <i class="fa-solid fa-user"></i> estevaonrs
-                    </a>
+                    </a><div class="theme-toggle">
+                        <i class="fa-solid fa-sun sun-icon active"></i>
+                        <i class="fa-solid fa-moon moon-icon"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,10 +56,10 @@
             </div>
 
             <div class="sidebar sidebar-desktop">
-                <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Conta de estevaonrs</a></div>
+                <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Subcontas</a></div>
                 <hr>
-                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-user"></i> Personagens</a></div>
-                <div class="menu-item"><a href="conquistas.html"><i class="fas fa-check"></i> Conquistas</a></div>
+                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-users"></i> Personagens</a></div>
+                <div class="menu-item"><a href="conquistas.html"><i class="fa-solid fa-trophy"></i> Conquistas</a></div>
                 <div class="menu-item"><a href="passes.html"><i class="fas fa-donate"></i> Passes</a></div>
                 <div class="menu-item active"><a href="quests.html"><i class="fa-solid fa-ticket"></i> Quests</a></div>
             </div>
@@ -80,7 +80,91 @@
                 <div class="item">Tempo jogado<br><span class="highlight">17.000</span></div>
             </div>
 
-            
+            <div class="table-container">
+                <div class="table-header">
+                    <h1>Quests</h1>
+                </div>
+                <div class="table-body">
+                    <div class="quest-content">
+                        <div class="quest-item" onclick="openModal('questModal')">
+                            <div class="quest-item-container">
+                                <img src="assets/images/Emt_20.gif" alt="quest" class="quest-item-img">
+                                <div class="quest-item-info">
+                                    <h3>First Encounter</h3>
+                                    <p>Let's check attendance</p>
+                                </div>
+                                <div class="quest-counter-bg">
+                                    <img src="assets/images/items/512.png" alt="Counter" class="quest-counter-img">
+                                    <div class="quest-counter-text">x100</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quest-item" onclick="openModal('questModal')">
+                            <div class="quest-item-container">
+                                <img src="assets/images/Emt_20.gif" alt="quest" class="quest-item-img">
+                                <div class="quest-item-info">
+                                    <h3>First Encounter</h3>
+                                    <p>Let's check attendance</p>
+                                </div>
+                                <div class="quest-counter-bg">
+                                    <img src="assets/images/items/512.png" alt="Counter" class="quest-counter-img">
+                                    <div class="quest-counter-text">x100</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quest-item" onclick="openModal('questModal')">
+                            <div class="quest-item-container">
+                                <img src="assets/images/Emt_20.gif" alt="quest" class="quest-item-img">
+                                <div class="quest-item-info">
+                                    <h3>First Encounter</h3>
+                                    <p>Let's check attendance</p>
+                                </div>
+                                <div class="quest-counter-bg">
+                                    <img src="assets/images/items/512.png" alt="Counter" class="quest-counter-img">
+                                    <div class="quest-counter-text">x100</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quest-item" onclick="openModal('questModal')">
+                            <div class="quest-item-container">
+                                <img src="assets/images/Emt_24.gif" alt="quest" class="quest-item-img">
+                                <div class="quest-item-info">
+                                    <h3>First Encounter</h3>
+                                    <p>Let's check attendance</p>
+                                </div>
+                                <div class="quest-counter-bg">
+                                    <img src="assets/images/items/512.png" alt="Counter" class="quest-counter-img">
+                                    <div class="quest-counter-text">x100</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="quest-item" onclick="openModal('questModal')">
+                            <div class="quest-item-container">
+                                <img src="assets/images/Emt_27.gif" alt="quest" class="quest-item-img">
+                                <div class="quest-item-info">
+                                    <h3>First Encounter</h3>
+                                    <p>Let's check attendance</p>
+                                </div>
+                                <div class="quest-counter-bg">
+                                    <img src="assets/images/items/512.png" alt="Counter" class="quest-counter-img">
+                                    <div class="quest-counter-text">x100</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="questModal" class="conquista-modal">
+                    <div class="quest-modal-header">
+                        <h3>Objetivo:</h3>
+                        <div class="quest-badge completed"></div>
+                        <span id="closeModal" class="close-btn">X</span>
+                    </div>
+                    <div class="quest-modal-body">
+                        <p> Let's check attendance Let's check attendance Let's check attendance Let's check attendance Let's check attendance Let's check attendance Let's check attendance.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -154,6 +238,17 @@
             menu.classList.toggle('active');
             toggle.classList.toggle('active');
         }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function hideModal() {
+            document.getElementById('questModal').style.display = 'none';
+        }
+
+        document.getElementById('closeModal').addEventListener('click', hideModal);
+
 
     </script>
 </body>

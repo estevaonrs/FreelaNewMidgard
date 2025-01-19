@@ -29,15 +29,15 @@
                     <a href="#" class="tab-link">Mercado</a>
                 </div>
                 <div class="action-section">
-                    <div class="theme-toggle">
-                        <i class="fa-solid fa-sun sun-icon active"></i>
-                        <i class="fa-solid fa-moon moon-icon"></i>
-                    </div>
+         
                     <a href="#" class="btn btn-donate">Doar</a>
                     <a href="#" class="btn btn-download">Baixar</a>
                     <a href="#" class="btn btn-entrar">
                         <i class="fa-solid fa-user"></i> estevaonrs
-                    </a>
+                    </a><div class="theme-toggle">
+                        <i class="fa-solid fa-sun sun-icon active"></i>
+                        <i class="fa-solid fa-moon moon-icon"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,10 +56,10 @@
             </div>
 
             <div class="sidebar sidebar-desktop">
-                <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Conta de estevaonrs</a></div>
+                <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Subcontas</a></div>
                 <hr>
-                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-user"></i> Personagens</a></div>
-                <div class="menu-item active"><a href="conquistas.html"><i class="fas fa-check"></i> Conquistas</a></div>
+                <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-users"></i> Personagens</a></div>
+                <div class="menu-item active"><a href="conquistas.html"><i class="fa-solid fa-trophy"></i> Conquistas</a></div>
                 <div class="menu-item"><a href="passes.html"><i class="fas fa-donate"></i> Passes</a></div>
                 <div class="menu-item"><a href="quests.html"><i class="fa-solid fa-ticket"></i> Quests</a></div>
             </div>
@@ -80,7 +80,194 @@
                 <div class="item">Tempo jogado<br><span class="highlight">17.000</span></div>
             </div>
 
-            
+
+            <div class="conquista-header">
+                <div class="title-container">
+                    <h1>Aventura</h1>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">
+                            <img src="assets/images/dropdown.png" alt="Dropdown">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Todos</a></li>
+                            <li><a href="#">Aventura</a></li>
+                            <li><a href="#">Batalha</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="conquista-header-info">
+                    <div class="conquista-reading-grade-container">
+                        <div class="conquista-reading-grade-wrapper">
+                            <span class="conquista-reading-grade">Reading Grade 1</span>
+                            <span class="conquista-reading-grade-counter">1/80</span>
+                        </div>
+                        <div class="conquista-reading-progress-container">
+                            <div class="conquista-reading-progress-bar" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conquista-content">
+                <div class="conquista-item" onclick="openModal('conquistaModal')">
+                    <div class="conquista-item-points">10 Points</div>
+                    <div class="conquista-item-container">
+                        <img src="assets/images/conquista.png" alt="Conquista" class="conquista-item-img">
+                        <div class="conquista-item-info">
+                            <h3>First Encounter</h3>
+                            <p>Let's check attendance</p>
+                        </div>
+                        <div class="conquista-counter-bg">
+                            <img src="assets/images/closed-box.png" alt="Counter" class="conquista-counter-img">
+                            <div class="conquista-counter-text">x100</div>
+                        </div>
+                    </div>
+                    <div class="conquista-progress-wrapper">
+                        <div class="conquista-progress-bar-container">
+                            <div class="conquista-progress-bar" style="width: 100%;"></div>
+                        </div>
+                        <span class="conquista-progress-counter">1/1</span>
+                    </div>
+                </div>
+                <div class="conquista-item">
+                    <div class="conquista-item-points">10 Points</div>
+                    <div class="conquista-item-container">
+                        <img src="assets/images/conquista.png" alt="Conquista" class="conquista-item-img">
+                        <div class="conquista-item-info">
+                            <h3>First Encounter</h3>
+                            <p>Let's check attendance</p>
+                        </div>
+                        <div class="conquista-counter-bg">
+                            <img src="assets/images/closed-box.png" alt="Counter" class="conquista-counter-img">
+                            <div class="conquista-counter-text">x100</div>
+                        </div>
+                    </div>
+                    <div class="conquista-progress-wrapper">
+                        <div class="conquista-progress-bar-container">
+                            <div class="conquista-progress-bar" style="width: 100%;"></div>
+                        </div>
+                        <span class="conquista-progress-counter">1/1</span>
+                    </div>
+                </div>
+                <div class="conquista-item">
+                    <div class="conquista-item-points">10 Points</div>
+                    <div class="conquista-item-container">
+                        <img src="assets/images/conquista.png" alt="Conquista" class="conquista-item-img">
+                        <div class="conquista-item-info">
+                            <h3>First Encounter</h3>
+                            <p>Let's check attendance</p>
+                        </div>
+                        <div class="conquista-counter-bg">
+                            <img src="assets/images/closed-box.png" alt="Counter" class="conquista-counter-img">
+                            <div class="conquista-counter-text">x100</div>
+                        </div>
+                    </div>
+                    <div class="conquista-progress-wrapper">
+                        <div class="conquista-progress-bar-container">
+                            <div class="conquista-progress-bar" style="width: 100%;"></div>
+                        </div>
+                        <span class="conquista-progress-counter">1/1</span>
+                    </div>
+                </div>
+                <div class="conquista-item">
+                    <div class="conquista-item-points">10 Points</div>
+                    <div class="conquista-item-container">
+                        <img src="assets/images/conquista.png" alt="Conquista" class="conquista-item-img">
+                        <div class="conquista-item-info">
+                            <h3>First Encounter</h3>
+                            <p>Let's check attendance</p>
+                        </div>
+                        <div class="conquista-counter-bg">
+                            <img src="assets/images/closed-box.png" alt="Counter" class="conquista-counter-img">
+                            <div class="conquista-counter-text">x100</div>
+                        </div>
+                    </div>
+                    <div class="conquista-progress-wrapper">
+                        <div class="conquista-progress-bar-container">
+                            <div class="conquista-progress-bar" style="width: 100%;"></div>
+                        </div>
+                        <span class="conquista-progress-counter">1/1</span>
+                    </div>
+                </div>
+                <div class="conquista-item">
+                    <div class="conquista-item-points">10 Points</div>
+                    <div class="conquista-item-container">
+                        <img src="assets/images/conquista.png" alt="Conquista" class="conquista-item-img">
+                        <div class="conquista-item-info">
+                            <h3>First Encounter</h3>
+                            <p>Let's check attendance</p>
+                        </div>
+                        <div class="conquista-counter-bg">
+                            <img src="assets/images/closed-box.png" alt="Counter" class="conquista-counter-img">
+                            <div class="conquista-counter-text">x100</div>
+                        </div>
+                    </div>
+                    <div class="conquista-progress-wrapper">
+                        <div class="conquista-progress-bar-container">
+                            <div class="conquista-progress-bar" style="width: 100%;"></div>
+                        </div>
+                        <span class="conquista-progress-counter">1/1</span>
+                    </div>
+                </div>
+                <div class="conquista-item">
+                    <div class="conquista-item-points">10 Points</div>
+                    <div class="conquista-item-container">
+                        <img src="assets/images/conquista.png" alt="Conquista" class="conquista-item-img">
+                        <div class="conquista-item-info">
+                            <h3>First Encounter</h3>
+                            <p>Let's check attendance</p>
+                        </div>
+                        <div class="conquista-counter-bg">
+                            <img src="assets/images/closed-box.png" alt="Counter" class="conquista-counter-img">
+                            <div class="conquista-counter-text">x100</div>
+                        </div>
+                    </div>
+                    <div class="conquista-progress-wrapper">
+                        <div class="conquista-progress-bar-container">
+                            <div class="conquista-progress-bar" style="width: 100%;"></div>
+                        </div>
+                        <span class="conquista-progress-counter">1/1</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="conquista-overall-progress">
+                <div class="conquista-overall-progress-bar-container">
+                    <div class="conquista-overall-progress-bar" style="width: 1%;"></div>
+                </div>
+                <span class="conquista-overall-progress-percentage">0%</span>
+                <div class="conquista-overall-progress-right">
+                    <div class="conquista-overall-progress-item">
+                        <img src="assets/images/Bt_quest.png" alt="Adventure">
+                        <span class="conquista-overall-progress-item-text">Adventure</span>
+                    </div>
+                    <div class="conquista-overall-progress-item">
+                        <img src="assets/images/Bt_battle.png" alt="Battle">
+                        <span class="conquista-overall-progress-item-text">Battle</span>
+                    </div>
+                    <div class="conquista-overall-progress-item">
+                        <img src="assets/images/Bt_equip.png" alt="Gear">
+                        <span class="conquista-overall-progress-item-text">Gear</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="conquistaModal" class="conquista-modal">
+                <div class="conquista-modal-header">
+                    <h3>First Encounter</h3>
+                    <div class="conquista-badge completed"></div>
+                    <span id="closeModal" class="close-btn">X</span>
+                </div>
+                <div class="conquista-modal-body">
+                    <p>Let's check attendance.</p>
+                </div>
+                <div class="conquista-modal-footer">
+                    <span>● Matar um gólem</span>
+                </div>
+                <div class="conquista-modal-button-container">
+                    <button class="conquista-header-button">Resgatar</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -155,6 +342,33 @@
             menu.classList.toggle('active');
             toggle.classList.toggle('active');
         }
+
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdown = document.querySelector('.dropdown');
+
+        dropdownToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); 
+            dropdown.classList.toggle('show'); 
+        });
+
+        document.addEventListener('click', () => {
+            dropdown.classList.remove('show');
+        });
+
+        dropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });   
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function hideModal() {
+            document.getElementById('conquistaModal').style.display = 'none';
+        }
+
+        document.getElementById('closeModal').addEventListener('click', hideModal);
+
 
     </script>
 </body>

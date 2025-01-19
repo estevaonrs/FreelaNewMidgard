@@ -29,15 +29,15 @@
                     <a href="#" class="tab-link">Mercado</a>
                 </div>
                 <div class="action-section">
-                    <div class="theme-toggle">
-                        <i class="fa-solid fa-sun sun-icon active"></i>
-                        <i class="fa-solid fa-moon moon-icon"></i>
-                    </div>
+         
                     <a href="#" class="btn btn-donate">Doar</a>
                     <a href="#" class="btn btn-download">Baixar</a>
                     <a href="#" class="btn btn-entrar">
                         <i class="fa-solid fa-user"></i> estevaonrs
-                    </a>
+                    </a><div class="theme-toggle">
+                        <i class="fa-solid fa-sun sun-icon active"></i>
+                        <i class="fa-solid fa-moon moon-icon"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -60,7 +60,7 @@
                 <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-gamepad"></i> Personagens</a></div>
                 <hr>
                 <div class="menu-item"><a href="personagens.html"><i class="fa-solid fa-gears"></i> Atributos</a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i> Coleção</a></div>
+                <div class="menu-item"><a href="colecao.html"><i class="fa-solid fa-box"></i> Inventário</a></div>
                 <div class="menu-item active"><a href="equipamentos.html"><i class="fa-solid fa-toolbox"></i></i> Equipamentos</a></div>
                 <div class="menu-item"><a href="rodex.html"><i class="fa-regular fa-envelope"></i> <span>Rodex</span></a></div>
 
@@ -70,7 +70,7 @@
                 <div class="menu-item"><a href="atributos.html"><i class="fa-solid fa-gears"></i><span>Atributos</span></a></div>
                 <div class="menu-item"><a href="rodex.html"><i class="fa-regular fa-envelope"></i> <span>Rodex</span></a></div>
                 <div class="menu-item active"><a href="passes.html"><i class="fa-solid fa-toolbox"></i><span>Equipamentos</span></a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i><span>Coleção</span></a></div>
+                <div class="menu-item"><a href="colecao.html"><i class="fa-solid fa-box"></i><span>Inventário</span></a></div>
             </div>
         </div>
 
@@ -83,83 +83,176 @@
             </div>
 
             <div class="collection-container">
-                <!-- Cabeçalho -->
                 <div class="header-collection">
-                    <img src="assets/images/ceu.png" alt="Céu" class="background-image-collection">
+                    <img src="assets/images/ceu-dark.png" alt="Céu" class="background-image-collection">
                     <h1></h1>
                     <img src="assets/images/personagem.png" alt="Personagem" class="character-image-collection">
                 </div>
 
                 <div class="grid-collection">
-                    <!-- Prateleira 1 -->
-                    <div class="prateleira">
-                        <div class="background-prateleira">
-                            <img src="assets/images/visuais-bg.png" alt="Céu" class="background-image-prateleira">
-                            <img src="assets/images/11.gif" alt="Personagem" class="character-image-prateleira">
-                        </div>
-                        <div class="itens-prateleira">
-    <!-- 5 itens à esquerda do personagem -->
-    <div class="item-left">
-        <div class="item">
-            <img src="assets/images/items/1.png" alt="Item 1">
-            <span class="item-name">Item 1</span>
-        </div>
-        <div class="item">
-            <img src="assets/images/items/2.png" alt="Item 2">
-            <span class="item-name">Item 2</span>
-        </div>
-        <div class="item">
-            <img src="assets/images/items/3.png" alt="Item 3">
-            <span class="item-name">Item 3</span>
-        </div>
-        <div class="item">
-            <img src="assets/images/items/4.png" alt="Item 4">
-            <span class="item-name">Item 4</span>
-        </div>
-        <div class="item">
-            <img src="assets/images/items/5.png" alt="Item 5">
-            <span class="item-name">Item 5</span>
-        </div>
-    </div>
+                
+                    <!-- Versão Desktop -->
+                    <div class="equipment-screen equipment-desktop">
+                        <div class="equipment-container">
+                            <!-- Brasão -->
+                            <img src="assets/images/brasao.png" alt="Brasão do Clã" class="clan-emblem">
 
-    <!-- 5 itens à direita do personagem -->
-    <div class="item-right">
-        <div class="item">
-            <img src="assets/images/items/6.png" alt="Item 6">
-            <span class="item-name">Item 6</span>
-        </div>
-        <div class="item">
-            <img src="assets/images/items/7.png" alt="Item 7">
-            <span class="item-name">Item 7</span>
-        </div>
-        <div class="item">
-            <img src="assets/images/items/8.png" alt="Item 8">
-            <span class="item-name">Item 8</span>
-        </div>
-        <div class="item">
-            <img src="assets/images/items/9.png" alt="Item 9">
-            <span class="item-name">Item 9</span>
-        </div>
-        <div class="item">
-            <img src="assets/images/items/10.png" alt="Item 10">
-            <span class="item-name">Item 10</span>
-        </div>
-    </div>
-</div>
+                            <!-- Lado Esquerdo -->
+                            <!-- Lado Esquerdo -->
+                            <div class="equipment-side left">
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lamina purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1136.png" alt="Item 2" class="item-image">
+                                    </div>
+                                    <p class="item-text">Espada do dragão</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/2165.png" alt="Item 3" class="item-image">
+                                    </div>
+                                    <p class="item-text">Escudo Dementador</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/2186.png" alt="Item 4" class="item-image">
+                                    </div>
+                                    <p class="item-text">Grimório demoniáco</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/2206.png" alt="Item 5" class="item-image">
+                                    </div>
+                                    <p class="item-text"> Manto de Luden</p>
+                                </div>
+                            </div>
+
+                            <!-- Personagem Central -->
+                            <div class="character-section">
+                                <img src="assets/images/11.gif" alt="Personagem" class="character-image">
+                            </div>
+
+                            <!-- Lado Direito -->
+                            <div class="equipment-side right">
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/2230.png" alt="Item 6" class="item-image">
+                                    </div>
+                                    <p class="item-text">Capacete de Viking</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/2326.png" alt="Item 7" class="item-image">
+                                    </div>
+                                    <p class="item-text">Casaco do caçador</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/2404.png" alt="Item 8" class="item-image">
+                                    </div>
+                                    <p class="item-text">Bota do caçador</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/2528.png" alt="Item 9" class="item-image">
+                                    </div>
+                                    <p class="item-text">Capuz de Rabaddon</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/2710.png" alt="Item 10" class="item-image">
+                                    </div>
+                                    <p class="item-text">Ombreira de Thor</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Prateleira 2 -->
-                    <div class="prateleira">
-                        <div class="background-prateleira">
-                            <img src="assets/images/equipamentos-bg.png" alt="Céu" class="background-image-prateleira">
-                            <img src="assets/images/11.gif" alt="Personagem" class="character-image-prateleira">
+                    <!-- Versão Mobile -->
+                    <div class="equipment-screen equipment-mobile">
+                        <div class="equipment-container">
+                            <!-- Brasão -->
+                            <img src="assets/images/brasao.png" alt="Brasão do Clã" class="clan-emblem">
+
+                            <!-- Personagem -->
+                            <div class="character-section">
+                                <img src="assets/images/11.gif" alt="Personagem" class="character-image">
+                            </div>
+
+                            <!-- Itens (dispostos em grade) -->
+                            <div class="equipment-side">
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <div class="equipment-item">
+                                    <div class="item-image-bg">
+                                        <img src="assets/images/items/1103.png" alt="Item 1" class="item-image">
+                                    </div>
+                                    <p class="item-text">Lâmina Purificadora</p>
+                                </div>
+                                <!-- Outros itens em grade -->
+                            </div>
                         </div>
-                        
                     </div>
+                    
                 </div>
             </div>
-
-            
         </div>
     </div>
 

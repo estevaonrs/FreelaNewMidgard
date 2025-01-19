@@ -29,15 +29,15 @@
                     <a href="#" class="tab-link">Mercado</a>
                 </div>
                 <div class="action-section">
-                    <div class="theme-toggle">
-                        <i class="fa-solid fa-sun sun-icon active"></i>
-                        <i class="fa-solid fa-moon moon-icon"></i>
-                    </div>
+         
                     <a href="#" class="btn btn-donate">Doar</a>
                     <a href="#" class="btn btn-download">Baixar</a>
                     <a href="#" class="btn btn-entrar">
                         <i class="fa-solid fa-user"></i> estevaonrs
-                    </a>
+                    </a><div class="theme-toggle">
+                        <i class="fa-solid fa-sun sun-icon active"></i>
+                        <i class="fa-solid fa-moon moon-icon"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                 <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-gamepad"></i> Personagens</a></div>
                 <hr>
                 <div class="menu-item active"><a href="personagens.html"><i class="fa-solid fa-gears"></i> Atributos</a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i> Coleção</a></div>
+                <div class="menu-item"><a href="colecao.html"><i class="fa-solid fa-box"></i> Inventário</a></div>
                 <div class="menu-item"><a href="equipamentos.html"><i class="fa-solid fa-toolbox"></i>Equipamentos</a></div>
                 <div class="menu-item"><a href="rodex.html"><i class="fa-regular fa-envelope"></i> <span>Rodex</span></a></div>
             </div>
@@ -67,22 +67,30 @@
                 <div class="menu-item active"><a href="personagens.html"><i class="fa-solid fa-gears"></i><span>Atributos</span></a></div>
                 <div class="menu-item"><a href="rodex.html"><i class="fa-regular fa-envelope"></i> <span>Rodex</span></a></div>
                 <div class="menu-item"><a href="equipamentos.html"><i class="fa-solid fa-toolbox"></i><span>Equipamentos</span></a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i><span>Coleção</span></a></div>
+                <div class="menu-item"><a href="colecao.html"><i class="fa-solid fa-box"></i><span>Inventário</span></a></div>
             </div>
         </div>
 
        <div class="main-content">
-            <h1>Atributos</h1>
+            <h1>Visão geral das Subcontas</h1>
             <div class="overview">
                 <div class="item">Personagens<br><span class="highlight">150</span></div>
                 <div class="separator"></div>
                 <div class="item">Tempo jogado<br><span class="highlight">17.000</span></div>
             </div>
+        
+            <div class="subaccounts">
+                <div class="header">
+                    <h2>Atributos</h2>
+                    <div class="header-buttons">
+                        <button onclick="openModal('appearanceModal')">Resetar Aparência</button>
+                        <button onclick="openModal('positionModal')">Resetar Posição</button>
+                    </div>
+                </div>
+            </div>
 
             <div class="container-attributes">
-                <!-- Container geral com colunas -->
                 <div class="columns-container">
-                    <!-- Coluna do personagem -->
                     <div class="column">
                         <div class="header-attributes-vertical">
                             <img src="assets/images/bg-my-char.png" alt="Background" class="background-image-vertical">
@@ -92,10 +100,8 @@
                             <h2 class="character-name">Estevaonrs</h2>
                             <span class="character-level">Nível 18/92</span>
                         </div>
-                        <button class="action-appearence-button" onclick="openModal('appearanceModal')">Resetar Aparência</button>
                     </div>
 
-                    <!-- Coluna do mapa -->
                     <div class="column">
                         <div class="map-container-vertical">
                             <img src="assets/images/mapa.png" alt="Mapa" class="map-image-vertical">
@@ -104,13 +110,10 @@
                             <h3 class="location-title">Localização</h3>
                             <span class="character-location">Fronteira (175,172)</span>
                         </div>
-                        <button class="action-position-button" onclick="openModal('positionModal')">Resetar Posição</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Modal de Resetar Aparência -->
-            <!-- Modal de Resetar Aparência -->
             <div id="appearanceModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-inner-content">
@@ -125,7 +128,6 @@
                 </div>
             </div>
 
-            <!-- Modal de Resetar Posição -->
             <div id="positionModal" class="modal">
                 <div class="modal-content">
                     <div class="modal-inner-content">
@@ -213,12 +215,10 @@
             toggle.classList.toggle('active');
         }
 
-        /* Função para exibir o modal */
         function openModal(modalId) {
             document.getElementById(modalId).style.display = 'flex';
         }
 
-        /* Função para fechar o modal */
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = 'none';
         }
