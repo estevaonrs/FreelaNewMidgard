@@ -1,3 +1,20 @@
+:root {
+    --background-color: #202040;
+    --text-color: white;
+    --link-color: #8c4830;
+    --breadcrumb-border-color: #ddd;
+    --card-hover-background: #333;
+}
+
+body.light-mode {
+    --background-color: white;
+    --text-color: #8c4830;
+    --link-color: #333;
+    --breadcrumb-border-color: #bbb;
+    --card-hover-background: #f5f5f5;
+}
+
+
 body {
     background-color: #15171e;
     background-image: url('../images/bgdesktop.svg');
