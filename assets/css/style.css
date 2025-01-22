@@ -287,7 +287,7 @@ body {
     position: relative;  
     height: calc(100vh - 535px); 
     z-index: 2;  
-    width: 200px;
+    width: 210px;
 }
 
 .sidebar-desktop .menu-item {
