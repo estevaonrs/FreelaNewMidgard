@@ -30,9 +30,9 @@
                 </div>
                 <div class="action-section">
          
-                    <a href="#" class="btn btn-donate">Doar</a>
+                    Personagem<a href="doacoes.html" class="btn btn-donate">Doar</a>
                     <a href="#" class="btn btn-download">Baixar</a>
-                    <a href="#" class="btn btn-entrar">
+                    <a href="index.html" class="btn btn-entrar">
                         <i class="fa-solid fa-user"></i> estevaonrs
                     </a><div class="theme-toggle">
                         <i class="fa-solid fa-sun sun-icon active"></i>
@@ -59,6 +59,7 @@
                 <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Subcontas</a></div>
                 <hr>
                 <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-users"></i> Personagens</a></div>
+                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i>Armazém</a></div>
                 <div class="menu-item"><a href="conquistas.html"><i class="fa-solid fa-trophy"></i> Conquistas</a></div>
                 <div class="menu-item"><a href="passes.html"><i class="fas fa-donate"></i> Passes</a></div>
                 <div class="menu-item active"><a href="quests.html"><i class="fa-solid fa-ticket"></i> Quests</a></div>
@@ -66,6 +67,7 @@
 
             <div class="sidebar sidebar-mobile">
                 <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-users"></i><span>Personagens</span></a></div>
+                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i>Armazém</a></div>
                 <div class="menu-item"><a href="passes.html"><i class="fas fa-donate"></i><span>Passes</span></a></div>
                 <div class="menu-item active"><a href="quests.html"><i class="fa-solid fa-ticket"></i><span>Quests</span></a></div>
                 <div class="menu-item"><a href="conquistas.html"><i class="fas fa-check"></i><span>Conquistas</span></a></div>
@@ -80,7 +82,22 @@
                 <div class="item">Tempo jogado<br><span class="highlight">17.000</span></div>
             </div>
 
+            <div class="quest-header">
+                <h2>Quests</h2>
+                <div class="dropdown">
+                    <button class="dropdown-toggle">
+                        <img src="assets/images/dropdown.png" alt="Dropdown">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Quest 01</a></li>
+                        <li><a href="#">Quest 02</a></li>
+                        <li><a href="#">Quest 03</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="table-container">
+            
                 <div class="table-header">
                     <h1>Quests</h1>
                 </div>
@@ -248,6 +265,22 @@
         }
 
         document.getElementById('closeModal').addEventListener('click', hideModal);
+
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdown = document.querySelector('.dropdown');
+
+        dropdownToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('show');
+        });
+
+        document.addEventListener('click', () => {
+            dropdown.classList.remove('show');
+        });
+
+        dropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });     
 
 
     </script>

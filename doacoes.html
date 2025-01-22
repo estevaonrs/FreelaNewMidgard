@@ -30,9 +30,9 @@
                 </div>
                 <div class="action-section">
          
-                    <a href="#" class="btn btn-donate">Doar</a>
+                    Personagem<a href="doacoes.html" class="btn btn-donate">Doar</a>
                     <a href="#" class="btn btn-download">Baixar</a>
-                    <a href="#" class="btn btn-entrar">
+                    <a href="index.html" class="btn btn-entrar">
                         <i class="fa-solid fa-user"></i> estevaonrs
                     </a><div class="theme-toggle">
                         <i class="fa-solid fa-sun sun-icon active"></i>
@@ -58,19 +58,15 @@
                 <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Conta de estevaonrs</a></div>
                 <hr>
                 <div class="menu-item"><a href="index.html"><i class="fa-solid fa-users"></i>Subcontas</a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i>Armazém</a></div>
-                <div class="menu-item"><a href="indicacoes.html"><i class="fa-solid fa-list-check"></i>Indicações</a></div>
+                <div class="menu-item"><a href="indicacoes.html"><i class="fa-solid fa-user-check"></i>Indicações</a></div>
                 <div class="menu-item"><a href="votos.html"><i class="fas fa-check"></i> Votos</a></div>
                 <div class="menu-item active"><a href="doacoes.html"><i class="fas fa-donate"></i> Doações</a></div>
-                <div class="menu-item"><a href="perfil.html"><i class="fa-solid fa-user-check"></i> Perfil</a></div>
             </div>
 
             <div class="sidebar sidebar-mobile">
                 <div class="menu-item"><a href="index.html"><i class="fa-solid fa-users"></i><span>Subcontas</span></a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i>Armazém</a></div>
                 <div class="menu-item"><a href="votos.html"><i class="fas fa-check"></i><span>Votos</span></a></div>
                 <div class="menu-item active"><a href="doacoes.html"><i class="fas fa-donate"></i><span>Doações</span></a></div>
-                <div class="menu-item"><a href="perfil.html"><i class="fa-solid fa-user-check"></i><span>Perfil</span></a></div>
                 <div class="menu-item"><a href="indicacoes.html"><i class="fa-solid fa-list-check"></i><span>Indicações</span></a></div>
             </div>
         </div>
@@ -82,7 +78,16 @@
                 <div class="donation-banner">
                     <h2>Ajude com sua doação!</h2>
                 </div>
-                
+
+                <div class="donation-field">
+                    <label for="subaccount">Selecione a Subconta</label>
+                    <select id="subaccount" class="donation-input">
+                        <option value="" disabled selected>Escolha uma subconta</option>
+                        <option value="estevaonrs">estevaonrs</option>
+                        <option value="darkhero">darkhero</option>
+                    </select>
+                </div>
+
                 <div class="donation-field">
                     <label for="donation-amount">Valor da Doação</label>
                     <input type="text" id="donation-amount" class="donation-input" placeholder="R$ 0,00" />
@@ -90,48 +95,123 @@
                         <p><strong>Conversão em Cash:</strong> <span id="cash-conversion">0</span> Cash</p>
                     </div>
                 </div>
-                
+
                 <div class="donation-field">
                     <label for="donation-coupon">Cupom</label>
                     <input type="text" id="donation-coupon" class="donation-input" placeholder="Digite seu cupom" />
                 </div>
-                
+
                 <div class="donation-field">
                     <label for="terms">
-                        <input type="checkbox" id="terms" /> Eu concordo com os termos de doação
+                        <input type="checkbox" id="terms" />
+                        Eu concordo com os <a href="#" target="_blank" class="terms-link">termos de doação</a>
                     </label>
                 </div>
 
                 <div class="donation-field">
                     <a id="donate-cta" href="#" class="header-button" disabled>Doar</a>
                 </div>
-                
+
+                <div class="donation-rewards-dynamic">
+                    <h2>Bônus por Doação</h2>
+                    <div class="rewards-container">
+                        <div class="reward-item">
+                            <img src="assets/images/items/1.png" alt="Poção Grande de AP">
+                            <p>A cada <strong>R$1,00</strong></p>
+                            <p>1x Poção Grande de AP</p>
+                        </div>
+                        <div class="reward-item">
+                            <img src="assets/images/items/1.png" alt="Pontos Kafra">
+                            <p>A cada <strong>R$10,00</strong></p>
+                            <p>3.000 Pontos Kafra</p>
+                        </div>
+                        <div class="reward-item">
+                            <img src="assets/images/items/1.png" alt="Pacote do Aventureiro">
+                            <p>A cada <strong>R$50,00</strong></p>
+                            <p>1x Pacote do Aventureiro [NN]</p>
+                        </div>
+                        <div class="reward-item">
+                            <img src="assets/images/items/4.png" alt="Pergaminho dos Escolhidos">
+                            <p>A cada <strong>R$85,00</strong></p>
+                            <p>1x Pergaminho dos Escolhidos [NN]</p>
+                        </div>
+                        <div class="reward-item">
+                            <img src="assets/images/items/1.png" alt="Rocha Púrpura">
+                            <p>A cada <strong>R$150,00</strong></p>
+                            <p>1x Rocha Púrpura</p>
+                        </div>
+                        <div class="reward-item">
+                            <img src="assets/images/items/2.png" alt="Pergaminho Arma Fantasma">
+                            <p>A cada <strong>R$150,00</strong></p>
+                            <p>35x Perg. Arma Fantasma [NN]</p>
+                        </div>
+                        <div class="reward-item">
+                            <img src="assets/images/items/4.png" alt="Sino dos Desejos">
+                            <p>A cada <strong>R$2.500,00</strong></p>
+                            <p>1x Sino dos Desejos</p>
+                        </div>
+                        <div class="reward-item">
+                            <img src="assets/images/items/4.png" alt="Carta dos Amantes">
+                            <p>A cada <strong>R$2500,00</strong></p>
+                            <p>1x Carta dos Amantes</p>
+                        </div>
+                        <div class="reward-item">
+                            <img src="assets/images/items/4.png" alt="Pergaminho dos Campeões">
+                            <p>A cada <strong>R$2.500,00</strong></p>
+                            <p>1x Pergaminho dos Campeões</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="donation-first-bonus">
+                    <h2>Bônus de Primeira Doação</h2>
+                    <p>Faça uma doação de qualquer valor e receba:</p>
+                    <ul class="first-bonus-list">
+                        <li>
+                            <img src="assets/images/items/1.png" alt="Diário de Aventura">
+                            2x Diário de Aventura
+                        </li>
+                        <li>
+                            <img src="assets/images/items/1.png" alt="Chicle de Bola">
+                            2x Chicle de Bola
+                        </li>
+                        <li>
+                            <img src="assets/images/items/1.png" alt="Poção do Doador">
+                            2x Poção do Doador
+                        </li>
+                        <li>
+                            <img src="assets/images/items/1.png" alt="Ziegfried">
+                            10x Ziegfried
+                        </li>
+                        <li>
+                            <img src="assets/images/items/1.png" alt="VIP 7 Dias">
+                            7 Dias VIP
+                        </li>
+                        <li>
+                            <img src="assets/images/items/1.png" alt="Cs. Rédea 7 Dias">
+                            Cs. Rédea 7 Dias
+                        </li>
+                    </ul>
+                    <p class="note">*Itens intransferíveis entre contas</p>
+                </div>
+
                 <div class="donation-rewards">
-                    <h2>Brindes Disponíveis</h2>
+                    <h2>Bônus por Valor</h2>
                     <table>
                         <thead>
                             <tr>
-                                <th>Brinde</th>
-                                <th>Valor de Doação</th>
-                                <th>Quantidades</th>
+                                <th>Valor</th>
+                                <th>Recompensa</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>
-                                    <img src="assets/images/items/1.png" alt="Brinde 1" class="donation-reward-img">
-                                    <p>Caixa de itens</p>
-                                </td>
-                                <td>R$ 50,00</td>
-                                <td>10</td>
+                                <td>R$ 0 - 49,00</td>
+                                <td>10%</td>
                             </tr>
                             <tr>
-                                <td>
-                                    <img src="assets/images/items/2.png" alt="Brinde 2" class="donation-reward-img">
-                                    <p>Caixa de itens</p>
-                                </td>
-                                <td>R$ 100,00</td>
-                                <td>5</td>
+                                <td>R$ 50 - 99,00</td>
+                                <td>15%</td>
                             </tr>
                         </tbody>
                     </table>

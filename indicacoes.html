@@ -30,9 +30,9 @@
                 </div>
                 <div class="action-section">
          
-                    <a href="#" class="btn btn-donate">Doar</a>
+                    Personagem<a href="doacoes.html" class="btn btn-donate">Doar</a>
                     <a href="#" class="btn btn-download">Baixar</a>
-                    <a href="#" class="btn btn-entrar">
+                    <a href="index.html" class="btn btn-entrar">
                         <i class="fa-solid fa-user"></i> estevaonrs
                     </a><div class="theme-toggle">
                         <i class="fa-solid fa-sun sun-icon active"></i>
@@ -58,20 +58,16 @@
                 <div class="menu-item"><a href="index.html"><i class="fa-solid fa-gamepad"></i> Conta de estevaonrs</a></div>
                 <hr>
                 <div class="menu-item"><a href="index.html"><i class="fa-solid fa-users"></i>Subcontas</a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i>Armazém</a></div>
-                <div class="menu-item active"><a href="indicacoes.html"><i class="fa-solid fa-list-check"></i>Indicações</a></div>
+                <div class="menu-item active"><a href="indicacoes.html"><i class="fa-solid fa-user-check"></i>Indicações</a></div>
                 <div class="menu-item"><a href="votos.html"><i class="fas fa-check"></i> Votos</a></div>
                 <div class="menu-item"><a href="doacoes.html"><i class="fas fa-donate"></i> Doações</a></div>
-                <div class="menu-item"><a href="perfil.html"><i class="fa-solid fa-user-check"></i> Perfil</a></div>
             </div>
 
             <div class="sidebar sidebar-mobile">
                 <div class="menu-item"><a href="index.html"><i class="fa-solid fa-users"></i><span>Subcontas</span></a></div>
-                <div class="menu-item"><a href="armazem.html"><i class="fa-solid fa-box"></i>Armazém</a></div>
                 <div class="menu-item"><a href="votos.html"><i class="fas fa-check"></i><span>Votos</span></a></div>
                 <div class="menu-item"><a href="doacoes.html"><i class="fas fa-donate"></i><span>Doações</span></a></div>
                 <div class="menu-item"><a href="perfil.html"><i class="fa-solid fa-user-check"></i><span>Perfil</span></a></div>
-                <div class="menu-item active"><a href="indicacoes.html"><i class="fa-solid fa-list-check"></i><span>Indicações</span></a></div>
             </div>
         </div>
 
@@ -79,6 +75,11 @@
             <h1>Indicações</h1>
 
             <div class="collection-container">
+                <div class="conquista-overall-progress-bar-container">
+                    <div class="conquista-overall-progress-bar" style="width: 1%;"></div>
+                </div>
+                <span class="conquista-overall-progress-percentage">10%</span>
+
                 <div class="header-collection">
                     <img src="assets/images/ceu-dark.png" alt="Céu" class="background-image-collection">
                     <h1></h1>
@@ -86,6 +87,18 @@
                 </div>
 
                 <div class="grid-indication">
+                    <div id="rescueIndicationModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-inner-content">
+                                <img src="assets/images/swal-success.png" alt="Sucesso" class="modal-success-image">
+                                <p class="modal-question">Item resgatado com sucesso.</p>
+                                <div class="modal-buttons">
+                                    <button class="action-appearence-button" onclick="closeModal('rescueIndicationModal')">Legal!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="indication-reward">
                         <div class="indication-reward-details-container">
                             <div class="indication-reward-details">
@@ -113,212 +126,43 @@
                                 <div>5</div>
                             </div>
                         </div>  
-                        <button class="header-button">Resgatar</button>
-                    </div>
-                    <div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/664.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/642.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <button class="header-button">Resgatar</button>
-                    </div><div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/664.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/642.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <button class="header-button">Resgatar</button>
-                    </div><div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/664.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/642.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <button class="header-button">Resgatar</button>
-                    </div><div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/664.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/642.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <button class="header-button">Resgatar</button>
-                    </div><div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/664.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/642.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <button class="header-button">Resgatar</button>
-                    </div><div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/664.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/642.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <button class="header-button">Resgatar</button>
-                    </div>
-                    <div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/664.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/642.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <button class="header-button">Resgatar</button>
-                    </div>
+                        <div class="indication-info">
+                            <span>10 Indicações necessárias</span>
+                            <button class="header-button" id="btn-rescue-indication-1" onclick="openModal('rescueIndicationModal', 'btn-rescue-indication-1')">Resgatar</button>
+                        </div>
+                    </div>               
+                </div>
                 
+                <div class="donation-rewards">
+                    <h2>Indicações Realizadas</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="assets/images/cabeca.png" alt="Brinde 1" class="donation-reward-img">
+                                    <p>estevaonrs</p>
+                                </td>
+                                <td>24/05/2014</td>
+                                <td>Válido</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="assets/images/cabeca.png" alt="Brinde 2" class="donation-reward-img">
+                                    <p>DarkHero</p>
+                                </td>
+                                <td>21/01/2025</td>
+                                <td>Validando</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="conquista-overall-progress-bar-container">
-                    <div class="conquista-overall-progress-bar" style="width: 1%;"></div>
-                </div>
-                <span class="conquista-overall-progress-percentage">10%</span>
             </div>
         </div>
     </div>
@@ -392,6 +236,30 @@
             const toggle = document.querySelector('.menu-toggle');
             menu.classList.toggle('active');
             toggle.classList.toggle('active');
+        }
+
+        function openModal(modalId, buttonId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                document.getElementById(modalId).style.display = 'flex';
+                currentButtonId = buttonId;
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+
+            if (currentButtonId) {
+                const button = document.getElementById(currentButtonId);
+                if (button) {
+                    button.textContent = 'Resgatado';
+                    button.className = 'rescued';
+                    button.onclick = null;
+                }
+            }
         }
 
     </script>

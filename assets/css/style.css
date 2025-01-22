@@ -284,9 +284,10 @@ body {
 
 .sidebar-desktop {
     display: block; 
-    position: fixed;  
+    position: relative;  
     height: calc(100vh - 535px); 
     z-index: 2;  
+    width: 200px;
 }
 
 .sidebar-desktop .menu-item {
@@ -328,7 +329,7 @@ body {
     justify-content: center; 
     padding: 4px 8px; 
     border-radius: 8px; 
-    width: 12%; 
+    width: 10%; 
     font-size: 10px; 
     color: #fff;
     text-align: center;
@@ -458,6 +459,56 @@ body {
 
 .header-button:hover {
     transform: scale(1.1);
+}
+
+.indication-info button.rescued {
+    background-color: #6c757d;
+    color: white; 
+    cursor: not-allowed; 
+    border: 2px solid white; 
+    padding: 8px 16px;
+    border-radius: 20px;
+    opacity: 0.6; 
+    transition: all 0.3s ease;
+}
+
+.indication-info button.rescued:hover {
+    background-color: #6c757d;
+    border-color: whitesmoke;
+}
+
+.action-appearence-button-container button.rescued {
+    background-color: #6c757d;
+    color: white; 
+    cursor: not-allowed; 
+    border: 2px solid white; 
+    padding: 8px 16px;
+    border-radius: 20px;
+    opacity: 0.6; 
+    transition: all 0.3s ease;
+}
+
+.action-appearence-button-container button.rescued:hover {
+    background-color: #6c757d;
+    border-color: whitesmoke;
+}
+
+
+
+.conquista-modal-button-container button.rescued {
+    background-color: #6c757d;
+    color: white; 
+    cursor: not-allowed; 
+    border: 2px solid white; 
+    padding: 8px 16px;
+    border-radius: 20px;
+    opacity: 0.6; 
+    transition: all 0.3s ease;
+}
+
+.conquista-modal-button-container button.rescued:hover {
+    background-color: #6c757d;
+    border-color: whitesmoke;
 }
 
 
@@ -1053,8 +1104,12 @@ body.light-mode .menu a {
 
 .card-content button.rescued {
     background-color: #6c757d;
-    cursor: not-allowed;
-    border-color: whitesmoke;
+    color: white; 
+    cursor: not-allowed; 
+    border: 2px solid white; 
+    border-radius: 20px;
+    opacity: 0.6; 
+    transition: all 0.3s ease;
 }
 
 .card-content button.rescued:hover {
@@ -1082,7 +1137,13 @@ body.light-mode .menu a {
     font-size: 1.5rem; 
 }
 
+.quest-header {
+    display: flex;
+    align-items: center;
+}
+
 .dropdown {
+    margin-left: 10px;
     position: relative;
 }
 
@@ -1126,7 +1187,6 @@ body.light-mode .menu a {
 .dropdown-menu li a:hover {
     background-color: #f5f5f5;
 }
-
 
 .dropdown.show .dropdown-menu {
     display: block;
@@ -1565,6 +1625,13 @@ body.light-mode .menu a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
+.message.active {
+    background-color: #1e2a4a;
+    border: 1px solid #4a90e2;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+}
+
 
 .message-icon:hover {
     opacity: 0.8; 
@@ -1702,6 +1769,7 @@ body.light-mode .menu a {
 .action-appearence-button-container {
     display: flex;
     justify-content: right;
+    margin-top: 20px;
 }
 
 
@@ -2035,6 +2103,8 @@ body.light-mode .menu a {
     font-weight: bold;
     color: #fff;
     margin-right: 10px;
+    margin-bottom: 20px;
+
 }
 
 .conquista-overall-progress-right {
@@ -2211,7 +2281,7 @@ body.light-mode .menu a {
 }
 
 .conquista-header-button {
-    padding: 5px;
+    padding: 8px 16px;
     font-size: 12px; 
     border: none;
     cursor: pointer;
@@ -2447,6 +2517,21 @@ body.light-mode .menu a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.indication-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+    width: 100%;
+}
+
+.indication-info span {
+    font-size: 14px;
+    color: #9c5ce4;
+    font-weight: bold;
+}
+
 .vote-table-container {
     width: 100%;
     margin: 0 auto;
@@ -2546,6 +2631,16 @@ body.light-mode .menu a {
     font-family: 'Arial', sans-serif;
 }
 
+.terms-link {
+    color: #9c5ce4;
+    text-decoration: underline;
+}
+
+.terms-link:hover {
+    color: #7f51b3;
+    text-decoration: none;
+}
+
 .donation-input {
     width: 100%;
     padding: 14px;
@@ -2578,67 +2673,141 @@ body.light-mode .menu a {
     cursor: not-allowed;
 }
 
-.donation-rewards {
-    margin-top: 40px;
+select.donation-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
 }
 
-.donation-rewards h2 {
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 25px;
-    font-family: 'Arial', sans-serif;
+select.donation-input option {
+    color: #000;
+    background: #fff;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
 }
-
-.donation-reward-img {
-    width: 30px; 
-    height: auto;
-    display: block;
-    margin: 0 auto 10px auto;
-}
-
-.donation-rewards td p {
-    font-size: 18px;
-    color: #333;
-    text-align: center;
-    margin: 0;
-}
-
 .donation-rewards table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 30px;
     font-family: 'Arial', sans-serif;
+    background-color: transparent;
+    border: 2px solid white; 
 }
 
 .donation-rewards th, .donation-rewards td {
     padding: 16px;
     text-align: center;
-    border: 1px solid #ddd;
-    font-size: 18px;
-    color: #333;
+    border: 2px solid white;
+    font-size: 16px;
+    color: white;
 }
 
 .donation-rewards th {
-    background-color: #f1f1f1;
     font-weight: 700;
 }
 
-.donation-rewards td {
-    background-color: #fff;
-}
-
-.donation-rewards tr:nth-child(even) td {
-    background-color: #f9f9f9;
-}
 
 .donation-rewards tr:hover td {
-    background-color: #f1f1f1;
-
+    background-color: rgba(255, 255, 255, 0.3); 
 }
 
 .donation-field #donate-cta {
     text-decoration: none;
+}
+
+.donation-rewards-dynamic {
+    text-align: left;
+    color: white;
+    border-radius: 10px;
+}
+
+.donation-rewards-dynamic h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.rewards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.reward-item {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+.reward-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.reward-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.reward-item strong {
+    color: #9c5ce4;
+}
+
+.donation-first-bonus {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: white;
+}
+
+.donation-first-bonus h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.donation-first-bonus p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.first-bonus-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.first-bonus-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.first-bonus-list li img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.note {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #9c5ce4;
+    font-style: italic;
 }
 
 
@@ -2867,6 +3036,11 @@ body.light-mode .menu a {
 }
 
 @media (max-width: 768px) {
+
+    .reward-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
 
     .equipment-desktop {
         display: none;
@@ -3225,7 +3399,7 @@ body.light-mode .menu a {
     .sidenav {
         width: 250px; 
         margin-bottom: 20px;
-        padding: 4px;
+        padding: 10px;
  
     }
 
@@ -3404,7 +3578,8 @@ body.light-mode .menu a {
         cursor: pointer;
         font-size: 24px;
         color: #fff;
-        margin-right: 330px;
+        margin-right: 300px;
+        margin-top: 10px;
     }
 
     

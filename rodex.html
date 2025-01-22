@@ -30,9 +30,9 @@
                 </div>
                 <div class="action-section">
          
-                    <a href="#" class="btn btn-donate">Doar</a>
+                    Personagem<a href="doacoes.html" class="btn btn-donate">Doar</a>
                     <a href="#" class="btn btn-download">Baixar</a>
-                    <a href="#" class="btn btn-entrar">
+                    <a href="index.html" class="btn btn-entrar">
                         <i class="fa-solid fa-user"></i> estevaonrs
                     </a><div class="theme-toggle">
                         <i class="fa-solid fa-sun sun-icon active"></i>
@@ -59,14 +59,14 @@
             <div class="sidebar sidebar-desktop">
                 <div class="menu-item"><a href="subcontas.html"><i class="fa-solid fa-gamepad"></i> Personagens</a></div>
                 <hr>
-                <div class="menu-item"><a href="personagens.html"><i class="fa-solid fa-gears"></i> Atributos</a></div>
+                <div class="menu-item"><a href="personagens.html"><i class="fa-solid fa-gears"></i> Personagem</a></div>
                 <div class="menu-item"><a href="colecao.html"><i class="fa-solid fa-box"></i> Inventário</a></div>
                 <div class="menu-item"><a href="equipamentos.html"><i class="fa-solid fa-toolbox"></i>Equipamentos</a></div>
                 <div class="menu-item active"><a href="rodex.html"><i class="fa-regular fa-envelope"></i> <span>Rodex</span></a></div>
             </div>
 
             <div class="sidebar sidebar-mobile">
-                <div class="menu-item"><a href="personagens.html"><i class="fa-solid fa-gears"></i><span>Atributos</span></a></div>
+                <div class="menu-item"><a href="personagens.html"><i class="fa-solid fa-gears"></i><span>Personagem</span></a></div>
                 <div class="menu-item active"><a href="rodex.html"><i class="fa-regular fa-envelope"></i> <span>Rodex</span></a></div>
                 <div class="menu-item"><a href="equipamentos.html"><i class="fa-solid fa-toolbox"></i><span>Equipamentos</span></a></div>
                 <div class="menu-item"><a href="colecao.html"><i class="fa-solid fa-box"></i><span>Inventário</span></a></div>
@@ -88,8 +88,21 @@
                 </div>
 
                 <div class="content-container">
+
+                    <div id="rescueRodexModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-inner-content">
+                                <img src="assets/images/swal-success.png" alt="Sucesso" class="modal-success-image">
+                                <p class="modal-question">Você resgatou com sucesso.</p>
+                                <div class="modal-buttons">
+                                    <button class="action-appearence-button" onclick="closeModal('rescueRodexModal')">Legal!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
                     <div class="sidenav">
-                        <div class="message" data-id="message1">
+                        <div class="message active" data-id="message1">
                             <img src="assets/images/closed-box.png" alt="Ícone" class="message-icon" data-icon="closed-box.png">
                             <div class="message-content">
                                 <div class="message-title">Receba este presente 1</div>
@@ -159,40 +172,26 @@
                             </div>
                         </div>
                         <div class="action-appearence-button-container">
-                            <button class="header-button">Resgatar</button>
-                        </div>
-                    </div>
-                    <div class="message-details" id="message2-details">
-                        <h2 class="message-title">Receba este presente 2</h2>
-                        <p class="message-subject">Assunto: Estou te enviando esses itens pois sei que voce precisa.</p>
-                        <h3>Anexos:</h3>
-                        <div class="attachments">
-                            <div class="attachment-item">
-                                <img src="assets/images/items/1.png" alt="Item 1" class="attachment-image">
-                                <span class="attachment-name">Red Herb</span>
-                                <span class="attachment-quantity">50x</span>
-                            </div>
-                            <div class="attachment-item">
-                                <img src="assets/images/items/1.png" alt="Item 1" class="attachment-image">
-                                <span class="attachment-name">White Herb</span>
-                                <span class="attachment-quantity">1x</span>
-                            </div>
-                            <div class="attachment-item">
-                                <img src="assets/images/items/1.png" alt="Item 1" class="attachment-image">
-                                <span class="attachment-name">Blue Herb</span>
-                                <span class="attachment-quantity">2x</span>
-                            </div>
-                            <div class="attachment-item zeny">
-                                <span class="attachment-name">Zeny: 50</span>
-                            </div>
-                        </div>
-                        <div class="action-appearence-button-container">
-                            <button class="header-button">Resgatar</button>
+                            <button class="header-button" id="btn-rescue-rodex-1" onclick="openModal('rescueRodexModal', 'btn-rescue-rodex-1')">Resgatar</button>
                         </div>
                     </div>
                 </div>
 
-                <button class="header-button">Resgatar tudo</button>
+                <div id="rescueRodexAllModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-inner-content">
+                            <img src="assets/images/swal-success.png" alt="Sucesso" class="modal-success-image">
+                            <p class="modal-question">Você resgatou tudo com sucesso.</p>
+                            <div class="modal-buttons">
+                                <button class="action-appearence-button" onclick="closeModal('rescueRodexAllModal')">Legal!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-appearence-button-container">
+                    <button class="header-button" id="btn-rescue-rodex-1" onclick="openModal('rescueRodexAllModal', 'btn-rescue-rodex-1')">Resgatar Tudo</button>
+                </div>
             </div>
         </div>
     </div>
@@ -289,6 +288,10 @@
 
             messages.forEach((message) => {
                 message.addEventListener('click', () => {
+                    messages.forEach((msg) => msg.classList.remove('active'));
+
+                    message.classList.add('active');
+
                     const messageId = message.getAttribute('data-id');
                     const icon = message.querySelector('.message-icon');
 
@@ -306,8 +309,35 @@
                 });
             });
 
+            const resgatarButtons = document.querySelectorAll('.header-button');
+
+            resgatarButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    button.textContent = 'Resgatado';
+                    button.className = 'rescued';
+                    button.onclick = null;
+
+                });
+            });
+
             messages[0].click();
         });
+
+        function openModal(modalId, buttonId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                document.getElementById(modalId).style.display = 'flex';
+                currentButtonId = buttonId;
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            }
+
+        }
 
     </script>
 </body>
