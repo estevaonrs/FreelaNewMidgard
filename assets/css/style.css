@@ -398,6 +398,7 @@ body {
 
 .main-content h1 {
     font-size: 28px;
+    align-items: center;
 }
 
 .overview {
@@ -1258,7 +1259,7 @@ body.light-mode .menu a {
 
 .grid-collection {
     background-color: #19192e;
-    border-radius: 0 0 10px 10px; 
+    border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     padding: 4px; 
     gap: 4px;
@@ -1958,7 +1959,6 @@ body.light-mode .menu a {
     margin: 0 auto;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
     
 }
@@ -1972,6 +1972,8 @@ body.light-mode .menu a {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .table-header h1 {
@@ -1983,8 +1985,7 @@ body.light-mode .menu a {
 }
 
 .table-body {
-    background-color: #19192e;
-    padding: 16px;
+    padding: 4px;
 }
 
 
@@ -2468,15 +2469,13 @@ body.light-mode .menu a {
 }
 
 .grid-indication {
-    background-color: #19192e;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     gap: 10px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     max-width: 100%;
-    padding: 20px;
+    margin-top: 20px;
 }
 
 .indication-reward {
@@ -2581,7 +2580,6 @@ body.light-mode .menu a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    padding: 06px;
 }
 
 .vote-table-item {
@@ -2629,10 +2627,6 @@ body.light-mode .menu a {
     margin: 0;
 }
 
-.donation-form {
-    width: 100%;
-    padding: 20px;
-}
 
 .donation-field {
     margin-bottom: 20px;
@@ -2755,7 +2749,7 @@ select.donation-input option {
 
 .reward-item {
     flex: 1 1 calc(33.33% - 20px);
-    max-width: calc(33.33% - 20px);
+    max-width: calc(33.33% - 10px);
     border: 2px solid white;
     border-radius: 10px;
     padding: 15px;
@@ -2833,6 +2827,7 @@ select.donation-input option {
     grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
     gap: 10px;
     justify-content: start;
+    padding: 5px;
 }
 
 
@@ -3056,7 +3051,7 @@ select.donation-input option {
 
     .reward-item {
         flex: 1 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
+        max-width: calc(50% - 10px);
     }
 
     .equipment-desktop {
@@ -3189,7 +3184,6 @@ select.donation-input option {
 
     .vote-table-body {
         grid-template-columns: 1fr;
-        padding: 10px;
     }
 
     .vote-table-item img {
@@ -3202,7 +3196,6 @@ select.donation-input option {
 
     .grid-indication {
         grid-template-columns: repeat(1, 1fr);
-        padding: 10px;
     }
 
     .indication-reward {
@@ -3324,7 +3317,6 @@ select.donation-input option {
         margin: 0 auto;
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin-top: 10px;
     }
 
@@ -3349,7 +3341,7 @@ select.donation-input option {
 
     .table-body {
         background-color: #19192e;
-        padding: 16px;
+        padding: 4px;
         display: flex;
         flex-direction: column;
         align-items: center;
