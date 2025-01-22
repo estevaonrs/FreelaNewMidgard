@@ -2557,6 +2557,23 @@ body.light-mode .menu a {
     margin-top: 10px;
 }
 
+.vote-table-container .header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.vote-table-container .header button {
+    background-color: #9c5ce4;
+    border: 2px solid white;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
 .vote-table-header {
     width: 100%;
     height: 120px;
@@ -2580,6 +2597,7 @@ body.light-mode .menu a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    margin-top: 10px;
 }
 
 .vote-table-item {
