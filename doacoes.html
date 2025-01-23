@@ -93,6 +93,11 @@
                     <div class="donation-conversion">
                         <p><strong>Conversão em Cash:</strong> <span id="cash-conversion">0</span> Cash</p>
                     </div>
+
+                    <div class="donation-first-bonus">
+                        <h2>Bônus Recebidos:</h2>
+                        <ul class="first-bonus-list" id="bonus-list"></ul>
+                    </div>
                 </div>
 
                 <div class="donation-field">
@@ -292,35 +297,69 @@
 
         const donationAmountInput = document.getElementById('donation-amount');
         const cashConversionElement = document.getElementById('cash-conversion');
-        const donateButton = document.getElementById('donate-cta');
+        const bonusListElement = document.getElementById('bonus-list');
+
+        const bonusRewards = [
+            { value: 1, reward: "Poção Grande de AP", quantity: 1, icon: "assets/images/items/1.png" },
+            { value: 10, reward: "Pontos Kafra", quantity: 3000, icon: "assets/images/items/2.png" },
+            { value: 50, reward: "Pacote do Aventureiro [NN]", quantity: 1, icon: "assets/images/items/3.png" },
+            { value: 85, reward: "Pergaminho dos Escolhidos [NN]", quantity: 1, icon: "assets/images/items/4.png" },
+            { value: 150, reward: "Rocha Púrpura", quantity: 1, icon: "assets/images/items/4.png" },
+            { value: 150, reward: "Perg. Arma Fantasma [NN]", quantity: 35, icon: "assets/images/items/4.png" },
+            { value: 2500, reward: "Sino dos Desejos", quantity: 1, icon: "assets/images/items/4.png" },
+            { value: 2500, reward: "Carta dos Amantes", quantity: 1, icon: "assets/images/items/4.png" },
+            { value: 2500, reward: "Pergaminho dos Campeões", quantity: 1, icon: "assets/images/items/4.png" }
+        ];
 
         function applyMoneyMask(value) {
             value = value.replace(/\D/g, ''); 
-            value = value.replace(/(\d{2})$/, ',$1');
-            value = value.replace(/(\d)(\d{3},)/, '$1.$2');
-            return value ? 'R$ ' + value : ''; 
+            value = (parseFloat(value) / 100).toFixed(2); 
+            return value ? 'R$ ' + value.replace('.', ',') : '';
         }
 
-        function applyCashMask(value) {
-            value = (parseFloat(value) || 0).toFixed(2);
-            
-            value = value.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-            
-            value = value.replace(',', '.');
 
-            return value;
+        function calculateBonuses(amount) {
+            bonusListElement.innerHTML = '';
+
+            bonusRewards.forEach(bonus => {
+                const totalQuantity = Math.floor(amount / bonus.value) * bonus.quantity;
+
+                if (totalQuantity > 0) {
+                    const listItem = document.createElement('li');
+                    
+                    const iconImg = document.createElement('img');
+                    iconImg.src = bonus.icon; 
+                    iconImg.alt = bonus.reward;
+                    iconImg.style.width = '32px'; 
+                    iconImg.style.height = '32px';
+                    iconImg.style.marginRight = '8px';
+                    
+                    listItem.appendChild(iconImg);
+                    listItem.appendChild(document.createTextNode(`${totalQuantity}x ${bonus.reward}`));
+                    
+                    bonusListElement.appendChild(listItem);
+                }
+            });
         }
 
         donationAmountInput.addEventListener('input', function () {
-            let value = donationAmountInput.value;
+            let value = donationAmountInput.value.replace(/\D/g, '');
 
             let formattedValue = applyMoneyMask(value);
             donationAmountInput.value = formattedValue;
 
-            let cashValue = parseFloat(value.replace('R$', '').replace(',', '.')) || 0;
-            let cashConverted = cashValue * 3.5;
+            let numericValue = parseFloat(value) / 100 || 0;
 
-            cashConversionElement.innerText = applyCashMask(cashConverted.toString());
+            if (numericValue >= 1) {
+                let cashConverted = numericValue * 1000;
+
+                cashConversionElement.innerText = cashConverted.toLocaleString('pt-BR');
+
+                calculateBonuses(numericValue);
+            } else {
+                cashConversionElement.innerText = '0';
+                bonusListElement.innerHTML = '';
+            }
         });
 
     </script>
