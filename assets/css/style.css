@@ -1,5 +1,5 @@
 :root {
-    --background-color: #202040;
+    --background-color: #15171e;
     --text-color: white;
     --link-color: #8c4830;
     --breadcrumb-border-color: #ddd;
@@ -8,15 +8,19 @@
 
 body.light-mode {
     --background-color: white;
-    --text-color: #8c4830;
+    --text-background-colorful-color: white;
+    --text-background-white: #8c4830;
     --link-color: #333;
     --breadcrumb-border-color: #bbb;
     --card-hover-background: #f5f5f5;
+    --background-colorfull: #8c4830;
+    --background-colorfull-image: url('../images/dourado.webp');
+    --background-colorfull-active: #ecc474
 }
 
 
 body {
-    background-color: #15171e;
+    background-color: var(--background-color);
     background-image: url('../images/bgdesktop.svg');
     background-repeat: no-repeat;
     background-position: top;
@@ -48,8 +52,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #15171e;
-
+    background-color: var(--background-color);
     background-image: url('../images/bgdesktop.svg');
     background-repeat: no-repeat;
     background-position: top;
@@ -777,8 +780,8 @@ footer a {
 
 
 body.light-mode {
-    background-color: white;
-    color: #8c4830;
+    background-color: var(--background-color);
+    color: var(--text-background-white);
     background-image: none;
 }
 
@@ -789,30 +792,30 @@ body.light-mode .breadcrumb {
 
 body.light-mode .sidebar-desktop .menu-item a {
     text-decoration: none;
-    color: #8c4830;
+    color: var(--text-background-white);
 }
 
 body.light-mode .breadcrumb-item i {
-    color: #8c4830; 
+    color: var(--text-background-white);
 }
 
 body.light-mode .breadcrumb-item + .breadcrumb-item::before {
     content: "›"; 
-    color: #8c4830; 
+    color: var(--text-background-white);
 }
 
 body.light-mode .breadcrumb-item a {
     text-decoration: none; 
-    color: #8c4830; 
+    color: var(--text-background-white);
 }
 
 body.light-mode .breadcrumb-item a:hover {
     text-decoration: underline; 
-    color: #6a351f; 
+    color: var(--text-background-white);
 }
 
 body.light-mode .breadcrumb-item.active a{
-    color: #ecc474; 
+    color: var(--background-colorfull-active);
 }
 
 body.light-mode .breadcrumb-container {
@@ -821,13 +824,13 @@ body.light-mode .breadcrumb-container {
     display: flex;
     font-size: 16px;
     border-radius: 5px;
-    color: #8c4830; 
+    color: var(--background-colorfull);
     box-sizing: border-box; 
 } 
 
 body.light-mode .support-button {
-    background-color: #8c4830; 
-    color: #fff; 
+    background-color: var(--background-colorfull); 
+    color: var(--text-background-colorful-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
@@ -840,7 +843,7 @@ body.light-mode .support-button:hover {
 
 body.light-mode .container-navbar, 
 body.light-mode .container-footer {
-    background-color: #8c4830;
+    background-color: var(--background-colorfull);
     background-image: none;
 }
 
@@ -1298,96 +1301,171 @@ body.light-mode .menu a {
     color: white;
 }
 
-
-.equipment-screen {
+.equipments-tabs {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 10px;
+    justify-content: end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 10px;
 }
 
-.equipment-container {
+.tab-button {
+    background-color: #2d2d2d;
+    border: 2px solid white;
+    padding: 8px 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.tab-button.active {
+    background-color: #9c5ce4;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+.equipments-container {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.equipments-header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    padding-top: 60px;
+}
+
+.equipments-header img {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.equipments-equipamento-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 40px 20px 20px;
-    position: relative;
+    margin-bottom: 20px;
 }
 
-/* Brasão */
-.clan-emblem {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 130px;
-    height: 130px;
-    z-index: 2;
-}
-
-.equipment-side {
+.equipments-equipamento-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 25%;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30%;
+    min-height: 260px;
+
 }
 
-.equipment-item {
+.equipments-equipamento-item {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    padding: 10px 15px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
-.item-image-bg {
+.equipments-equipamento-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.equipments-equipamento-item .equipments-item-name {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.equipments-equipamento-item .equipments-item-slot {
     width: 40px;
     height: 40px;
-    background-color: #2a2a3d;
+    background-color: #4a4a4a;
+    border: 1px solid white;
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.item-image {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
+.equipments-equipamento-item .equipments-item-slot img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
 }
 
-.item-text {
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
-}
-
-.character-section {
-    position: relative;
+.equipments-personagem {
+    margin: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
-    margin-top: 80px;
 }
 
-.character-image {
-    width: 20%;
-    max-width: 150px;
-    object-fit: contain;
+.equipments-personagem img {
+    width: 50px;
+    max-height: 100%;
+    border-radius: 4px;
 }
 
-.equipment-desktop {
+.equipments-atributos {
+    margin-top: 20px;
+}
+
+.equipments-atributos table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.equipments-atributos .equipments-coluna {
     display: flex;
+    justify-content: space-between;
 }
 
-.equipment-mobile {
-    display: none;
+.equipments-atributos .equipments-coluna div {
+    width: 50%;
+}
+
+.equipments-atributos th {
+    text-align: left;
+    padding: 5px;
+    border: 1px solid #555;
+}
+
+.equipments-atributos td {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #555;
+}
+
+.equipments-zeny {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 
@@ -3065,6 +3143,65 @@ select.donation-input option {
 }
 
 @media (max-width: 768px) {
+
+    .equipments-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .equipments-header {
+        display: none;
+    }
+
+    .equipments-tabs {
+        margin-top: 0px;
+        gap: 10px;
+    }
+
+    .tab-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .equipments-equipamento-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .equipments-equipamento-list {
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+
+    .equipments-equipamento-item {
+        align-items: center;
+    }
+
+    .equipments-equipamento-item .equipments-item-slot {
+        width: 50px;
+        height: 50px;
+    }
+
+    .equipments-personagem {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .equipments-personagem img {
+        width: 70px;
+        height: auto;
+    }
+
+    .equipments-atributos th, .equipments-atributos td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .equipments-zeny {
+        font-size: 16px;
+        text-align: left;
+    }
 
     .reward-item {
         flex: 1 1 calc(50% - 20px);
