@@ -1,33 +1,51 @@
 :root {
     --background-color: #15171e;
-    --text-color: white;
-    --link-color: #8c4830;
-    --breadcrumb-border-color: #ddd;
-    --card-hover-background: #333;
+    --text-background-body-color: white;
+    --text-background-colorful-color: white;
+    --text-background-white: #000;
+    --text-active: #9c5ce4;
+    --text-hover: #9c5ce4;
+    --separator-color: #063fb9;
+    --border-color: white;
+    --border-btn-color: #9c5ce4;
+    --background-colorfull: rgb(28, 28, 52);
+    --footer-background: rgb(28, 28, 52);
+    --button-colorfull: #9c5ce4;
+    --background-image: url('../images/ceu-dark.png');
+    --background-image-body: url('../images/bgdesktop.svg');
+    --background-navbar-color: rgb(28, 28, 52);
+    --background-image-navbar: url('../images/bgdesktop.svg');
 }
 
 body.light-mode {
     --background-color: white;
+    --text-background-body-color: #8c4830;
     --text-background-colorful-color: white;
     --text-background-white: #8c4830;
-    --link-color: #333;
-    --breadcrumb-border-color: #bbb;
-    --card-hover-background: #f5f5f5;
+    --text-active: #ecc474;
+    --text-hover: #c78603;
+    --separator-color: white;
+    --border-color: #8c4830;
+    --border-btn-color: #ecc474;
     --background-colorfull: #8c4830;
-    --background-colorfull-image: url('../images/dourado.webp');
-    --background-colorfull-active: #ecc474
+    --footer-background: #8c4830;
+    --button-colorfull: #ecc474;
+    --background-image: url('../images/ceu.png');
+    --background-image-body: white;
+    --background-navbar-color: #8c4830;
+    --background-image-navbar: #8c4830;
 }
 
 
 body {
     background-color: var(--background-color);
-    background-image: url('../images/bgdesktop.svg');
+    background-image: var(--background-image-body);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     font-family: 'Urbanist', sans-serif; 
     font-size: 16px;
-    color: #fff;  
+    color: var(--text-background-body-color);  
     margin: 0;
     padding: 0;
 }
@@ -52,8 +70,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: var(--background-color);
-    background-image: url('../images/bgdesktop.svg');
+    background-color: var(--background-navbar-color);
+    background-image: var(--background-image-navbar);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -93,7 +111,7 @@ body {
 }
 
 .nav-section a:hover {
-    color: #9c5ce4;  
+    color: var(--text-hover);  
 }
 
 .nav-section a::after {
@@ -103,7 +121,7 @@ body {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #9c5ce4;
+    background-color: var(--text-hover);
     transform: scaleX(0);
     transition: transform 0.3s ease-in-out;
 }
@@ -166,7 +184,7 @@ body {
 
 
 .menu .btn-donate {
-    background-color: #9c5ce4; 
+    background-color: var(--button-colorfull);
     border: 2px solid white; 
     color: white; 
 }
@@ -198,7 +216,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #9c5ce4;
+    background-color: var(--button-colorfull);
     color: #fff;
     padding: 20px; 
     width: 20px;  
@@ -220,7 +238,7 @@ body {
 
 
 .support-button:hover {
-    background-color: #7a46c1; 
+    background-color: var(--text-hover); 
 }
 
 
@@ -239,7 +257,7 @@ body {
     display: flex;
     font-size: 16px;
     border-radius: 5px;
-    color: white; 
+    color: var(--text-background-body-color); 
     box-sizing: border-box; 
 }
 
@@ -258,7 +276,7 @@ body {
 }
 
 .breadcrumb-item i {
-    color: #6c757d;
+    color: var(--text-background-body-color);
     font-size: 16px;
 }
 
@@ -270,7 +288,7 @@ body {
 
 .breadcrumb-item a {
     text-decoration: none;
-    color: white;
+    color: var(--text-background-body-color);
 }
 
 .breadcrumb-item a:hover {
@@ -279,12 +297,9 @@ body {
 
 
 .breadcrumb-item.active a {
-    color: #9c5ce4;
+    color: var(--text-active);
 }
 
-.sidebar {
-    color: white;
-}
 
 .sidebar .menu-item {
     cursor: pointer;
@@ -294,12 +309,12 @@ body {
 }
 
 .sidebar .menu-item.active {
-    background-color: #9c5ce4;
+    background-color: var(--text-active);
     font-weight: bold;
 }
 
 .sidebar .menu-item:hover {
-    background-color: #2c2245;
+    background-color: var(--text-hover);
 }
 
 .sidebar-desktop {
@@ -320,7 +335,7 @@ body {
 
 .sidebar-desktop .menu-item a {
     text-decoration: none;
-    color: white;
+    color: var(--text-background-body-color);
 }
 
 .sidebar-desktop hr {
@@ -337,7 +352,7 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #1e2530;
+    background-color: var(--background-navbar-color);
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
     height: 50px;
 }
@@ -373,17 +388,17 @@ body {
 }
 
 .sidebar-mobile .menu-item.active {
-    color: #9c5ce4; 
+    color: var(--text-active); 
     background-color: transparent; 
     font-weight: bold;
 }
 
 .sidebar-mobile .menu-item.active i {
-    color: #9c5ce4; 
+    color: var(--text-active);  
 }
 
 .sidebar-mobile .menu-item.active span {
-    color: #9c5ce4; 
+    color: var(--text-active); 
 }
 
 .sidebar-mobile .menu-item:hover {
@@ -406,7 +421,7 @@ body {
 
 .overview {
     display: flex;
-    background-color: rgb(28, 28, 52);
+    background-color: var(--background-colorfull);
     padding: 8px; 
     border-radius: 8px;
     justify-content: space-between;
@@ -420,6 +435,7 @@ body {
     padding: 16px; 
     flex: 1;
     font-size: 16px;
+    color: var(--text-background-colorful-color);
 }
 
 .highlight {
@@ -430,7 +446,7 @@ body {
 .separator {
     width: 2px;
     height: 48px; 
-    background-color: #063fb9;
+    background-color: var(--separator-color);
     margin: 0 16px; 
 }
 
@@ -456,8 +472,8 @@ body {
 }
 
 .subaccounts .header button {
-    background-color: #9c5ce4;
-    border: 2px solid white;
+    background-color: var(--button-colorfull);
+    border: 2px solid var(--border-color);
     padding: 8px 16px;
     color: white;
     cursor: pointer;
@@ -467,8 +483,8 @@ body {
 }
 
 .header-button {
-    background-color: #9c5ce4;
-    border: 2px solid white;
+    background-color: var(--button-colorfull);
+    border: 2px solid var(--border-color);
     padding: 8px 16px;
     color: white;
     cursor: pointer;
@@ -548,7 +564,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #19192e;
+    background-color: var(--background-colorfull);
     border-radius: 8px;
     text-align: center;
     padding: 16px;
@@ -590,7 +606,6 @@ body {
   
   .subaccount-card:hover {
     transform: scale(1.05);
-    background-color: #202040;
     box-shadow: 0 2px px rgba(255, 255, 255, 0.2);
   }
   
@@ -685,7 +700,7 @@ footer a {
 #footer {
     padding: 40px 0 40px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: rgb(28, 28, 52);
+    background-color: var(--footer-background);
     font-size: 14px;
     line-height: 1.5;
     width: 100%;
@@ -712,7 +727,7 @@ footer a {
 }
 
 .footer-links :hover {
-    color: #9c5ce4;  
+    color: var(--text-hover);  
 }
 
 .footer-links li {
@@ -775,246 +790,10 @@ footer a {
 
 
 .social-icons a:hover i {
-    color: #9c5ce4; 
+    color: var(--text-hover);  
+
 }
 
-
-body.light-mode {
-    background-color: var(--background-color);
-    color: var(--text-background-white);
-    background-image: none;
-}
-
-
-body.light-mode .breadcrumb {
-    border-radius: 5px; 
-}
-
-body.light-mode .sidebar-desktop .menu-item a {
-    text-decoration: none;
-    color: var(--text-background-white);
-}
-
-body.light-mode .breadcrumb-item i {
-    color: var(--text-background-white);
-}
-
-body.light-mode .breadcrumb-item + .breadcrumb-item::before {
-    content: "›"; 
-    color: var(--text-background-white);
-}
-
-body.light-mode .breadcrumb-item a {
-    text-decoration: none; 
-    color: var(--text-background-white);
-}
-
-body.light-mode .breadcrumb-item a:hover {
-    text-decoration: underline; 
-    color: var(--text-background-white);
-}
-
-body.light-mode .breadcrumb-item.active a{
-    color: var(--background-colorfull-active);
-}
-
-body.light-mode .breadcrumb-container {
-    padding: 8px 8px;
-    list-style: none;
-    display: flex;
-    font-size: 16px;
-    border-radius: 5px;
-    color: var(--background-colorfull);
-    box-sizing: border-box; 
-} 
-
-body.light-mode .support-button {
-    background-color: var(--background-colorfull); 
-    color: var(--text-background-colorful-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
-}
-
-
-body.light-mode .support-button:hover {
-    background-color: #6a351f; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-}
-
-body.light-mode .container-navbar, 
-body.light-mode .container-footer {
-    background-color: var(--background-colorfull);
-    background-image: none;
-}
-
-body.light-mode .navbar .menu a {
-    color: white;
-}
-
-body.light-mode .sidebar-desktop {
-    background-color: transparent;
-}
-
-body.light-mode .sidebar-desktop .menu-item {
-    color: #8c4830;
-}
-
-body.light-mode .sidebar-desktop .menu-item:hover {
-    background-color: #ecc474;
-    color: white;
-}
-
-body.light-mode .sidebar .menu-item.active {
-    background-color: #ecc474;
-}
-
-body.light-mode .sidebar-mobile {
-    background-color: #8c4830;
-}
-
-body.light-mode .sidebar-mobile .menu-item:hover {
-    background-color: #8c4830;
-    color: white;
-}
-
-body.light-mode .sidebar-mobile .menu-item.active i {
-    color: #ecc474;
-}
-
-body.light-mode .sidebar-mobile .menu-item.active span {
-    color: #ecc474;
-}
-
-body.light-mode .sidebar-mobile .menu-item {
-    color: white;
-}
-
-body.light-mode .overview {
-    background-color: #8c4830;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-}
-
-body.light-mode .overview .item {
-    color: white;
-    padding: 16px; 
-}
-
-body.light-mode .overview .item .highlight {
-    color: white;
-}
-
-body.light-mode .menu .btn-donate {
-    background-image: url('../images/dourado.webp');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    border: 2px solid white; 
-    color: white; 
-}
-
-body.light-mode .subaccount-card {
-    background-image: url('../images/dourado.webp');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    padding: 16px; 
-    border-radius: 8px;
-    text-align: center;
-    max-width: 250px;
-    box-shadow: 0 0 1px 1px rgba(140, 72, 48, 0.3); 
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-body.light-mode .subaccount-card .info .highlight {
-    color: white;
-}
-
-body.light-mode .subaccounts .header button {
-    background-image: url('../images/dourado.webp');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    border: 2px solid #8c4830; 
-    padding: 8px 16px; 
-    color: white; 
-    cursor: pointer;
-    border-radius: 20px; 
-    font-size: 16px; 
-}
-
-body.light-mode .separator {
-    width: 2px;
-    height: 48px; 
-    background-color: white;
-    margin: 0 16px; 
-}
-
-body.light-mode #footer {
-    padding: 40px 0 40px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #8c4830;
-}
-
-body.light-mode .footer-info p{
-    color: white;
-}
-
-body.light-mode .footer-links :hover {
-    color: #ecc474;  
-}
-
-body.light-mode .social-icons a:hover i {
-    color: #ecc474; 
-}
-
-body.light-mode .nav-section {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    flex: 1; 
-    margin-left: 100px;
-}
-
-body.light-mode .nav-section a:hover {
-    color: #6a351f;
-}
-
-body.light-mode .nav-section a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #ecc474;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-in-out;
-}
-
-body.light-mode .nav-section a:hover::after {
-    transform: scaleX(1);
-}
-
-body.light-mode .action-section {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    justify-content: flex-end;
-}
-
-body.light-mode .action-section .btn:hover {
-    transform: scale(1.1);
-}
-
-body.light-mode .menu a {
-    text-decoration: none;
-    color: #8c4830;
-    position: relative;
-}
 
 .progress-bar-container {
     background-color: #333;
@@ -2044,7 +1823,7 @@ body.light-mode .menu a {
 .table-header {
     width: 100%;
     height: 120px;
-    background-image: url('../images/ceu-dark.png');
+    background-image: var(--background-image);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -2055,7 +1834,7 @@ body.light-mode .menu a {
 }
 
 .table-header h1 {
-    color: white;
+    color: var(--text-background-colorful-color);
     font-size: 48px;
     font-weight: bold;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -2197,7 +1976,6 @@ body.light-mode .menu a {
 .conquista-overall-progress-percentage {
     font-size: 14px;
     font-weight: bold;
-    color: #fff;
     margin-right: 10px;
     margin-bottom: 20px;
 
@@ -2560,7 +2338,7 @@ body.light-mode .menu a {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -2592,7 +2370,7 @@ body.light-mode .menu a {
     width: 30px;
     height: 30px;
     border-radius: 8px;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     padding: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -2622,7 +2400,7 @@ body.light-mode .menu a {
 
 .indication-info span {
     font-size: 14px;
-    color: #9c5ce4;
+    color: var(--text-background-body-color);
     font-weight: bold;
 }
 
@@ -2631,7 +2409,6 @@ body.light-mode .menu a {
     margin: 0 auto;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
 }
 
@@ -2642,8 +2419,8 @@ body.light-mode .menu a {
 }
 
 .vote-table-container .header button {
-    background-color: #9c5ce4;
-    border: 2px solid white;
+    background-color: var(--button-colorfull);
+    border: 2px solid var(--border-color);
     padding: 8px 16px;
     color: white;
     cursor: pointer;
@@ -2680,7 +2457,7 @@ body.light-mode .menu a {
 
 .vote-table-item {
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -2696,7 +2473,6 @@ body.light-mode .menu a {
 
 .vote-table-item p {
     font-size: 16px;
-    color: white;
     margin: 0;
 }
 
@@ -2798,17 +2574,16 @@ select.donation-input option {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 30px;
-    font-family: 'Arial', sans-serif;
     background-color: transparent;
-    border: 2px solid white; 
+    border: 2px solid var(--border-color); 
 }
 
 .donation-rewards th, .donation-rewards td {
     padding: 16px;
     text-align: center;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     font-size: 16px;
-    color: white;
+    color: var(--text-background-body-color);
 }
 
 .donation-rewards th {
@@ -3357,7 +3132,6 @@ select.donation-input option {
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
-        border: 2px solid white;
         padding: 15px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -3477,7 +3251,7 @@ select.donation-input option {
     .table-header {
         width: 100%;
         height: 100px;
-        background-image: url('../images/ceu-dark.png');
+        background-image: var(--background-image);
         background-size: cover;
         background-position: center;
         display: flex;
@@ -3486,7 +3260,7 @@ select.donation-input option {
     }
 
     .table-header h1 {
-        color: white;
+        color: var(--text-background-colorful-color);
         font-size: 20px;
         font-weight: bold;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -3543,8 +3317,6 @@ select.donation-input option {
         font-size: 12px; 
         font-weight: bold;
         color: white;
-        background-color: #9c5ce4;
-        border: 2px solid white;
         border-radius: 20px;
         cursor: pointer;
         transition: background-color 0.3s ease;
@@ -3602,7 +3374,6 @@ select.donation-input option {
         display: flex;
         font-size: 20px;
         border-radius: 5px;
-        color: white; 
         box-sizing: border-box; 
     }
 
@@ -3617,7 +3388,6 @@ select.donation-input option {
     .container-navbar {
         width: 100%;
         position: fixed;
-        background-color: #000;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         padding: 10px;
         top: 0;
@@ -3675,32 +3445,10 @@ select.donation-input option {
         left: 0; 
         width: 100vw; 
         height: calc(100vh - 100%); 
-        background-color: rgb(28, 28, 52);
+        background-color: var(--background-navbar-color);
         z-index: 999;
         padding: 0;
         margin: 0; 
-    }
-
-    body.light-mode .navbar .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%; 
-        left: 0; 
-        width: 100vw; 
-        height: calc(100vh - 100%); 
-        background-color: #8c4830;
-        z-index: 999;
-        padding: 0;
-        margin: 0; 
-    }
-
-    body.light-mode .navbar .menu.active {
-        display: flex;
-    }
-
-    body.light-mode .sidebar .menu-item.active {
-        background-color: transparent;
     }
 
     .navbar .menu.active {
@@ -3708,15 +3456,6 @@ select.donation-input option {
     }
 
     .navbar .nav-section {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0 16px;
-        margin-top: 20px;
-        margin-left: 0px;
-    }
-
-    body.light-mode .navbar .nav-section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -3734,7 +3473,7 @@ select.donation-input option {
     }
 
     .navbar .nav-section a:not(:last-child) {
-        border-bottom: 1px solid #444; 
+        border-bottom: 1px solid white; 
     }
 
     .theme-toggle {
@@ -3745,10 +3484,6 @@ select.donation-input option {
         margin-top: 10px;
     }
 
-    
-    body.light-mode .navbar .nav-section a:not(:last-child) {
-        border-bottom: 1px solid white; 
-    }
 
     .navbar .nav-section a:hover {
         background-color: #3a4754;
@@ -3773,19 +3508,8 @@ select.donation-input option {
     .navbar .btn-download {
         background: transparent; 
         color: white; 
-        border: 2px solid #9c5ce4; 
+        border: 2px solid var(--border-btn-color); 
         padding: 12px 24px; 
-        text-align: center;
-        border-radius: 8px;
-        text-transform: uppercase;
-        width: 100%;
-        transition: background-color 0.3s, color 0.3s; 
-    }
-
-    body.light-mode .navbar .btn-download {
-        background: transparent; 
-        color: white; 
-        border: 2px solid white; 
         text-align: center;
         border-radius: 8px;
         text-transform: uppercase;
@@ -3796,7 +3520,7 @@ select.donation-input option {
     .navbar .btn-donate {
         background-color: white; 
         color: #000; 
-        border: 2px solid #9c5ce4; 
+        border: 2px solid var(--border-btn-color); 
         padding: 12px 24px; 
         text-align: center;
         border-radius: 8px;
@@ -3808,7 +3532,7 @@ select.donation-input option {
     .navbar .btn-entrar {
         background: transparent; 
         color: white; 
-        border: 2px solid white; 
+        border: 2px solid var(--border-btn-color); 
         padding: 12px 24px; 
         text-align: center;
         border-radius: 8px;
@@ -3891,7 +3615,6 @@ select.donation-input option {
     }
 
     .subaccount-card {
-        background-color: #2a3347;
         border-radius: 16px;
         text-align: center;
         padding: 16px;
@@ -4000,20 +3723,6 @@ select.donation-input option {
         gap: 16px;
     }
     
-
-    body.light-mode .subaccounts .header button {
-        padding: 8px 14px;
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    body.light-mode .subaccounts .header {
-        gap: 16px;
-    }
-
-    body.light-mode .subaccounts .header-buttons {
-        gap: 100px;
-    }
 
     .support-button {
         padding: 15px; 
