@@ -1133,6 +1133,10 @@ footer a {
     display: block;
 }
 
+#equipamentos {
+    background-color: white;
+    border-radius: 8px;
+}
 
 .equipments-container {
     border-radius: 8px;
@@ -1140,6 +1144,7 @@ footer a {
     max-width: 800px;
     margin: 0 auto;
 }
+
 
 .equipments-header {
     text-align: center;
@@ -1160,10 +1165,11 @@ footer a {
 }
 
 .equipments-equipamento-section {
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
 .equipments-equipamento-list {
@@ -1194,7 +1200,7 @@ footer a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #d3cdcd;
     padding-bottom: 5px;
     margin-bottom: 5px;
 }
@@ -1203,7 +1209,7 @@ footer a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #d3cdcd;
     padding-bottom: 5px;
     margin-bottom: 5px;
 }
@@ -1226,7 +1232,7 @@ footer a {
     margin: 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: white;
+    color: black;
 }
 
 .equipments-equipamento-item-right .equipments-item-name-right {
@@ -1235,7 +1241,7 @@ footer a {
     margin: 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    color: white;
+    color: black;
 }
 
 .equipments-equipamento-item .equipments-item-slot {
@@ -1277,22 +1283,38 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .equipments-personagem img {
     width: 50px;
     max-height: 100%;
     border-radius: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.equipments-personagem::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 40px;
+    background-image: url('../images/sombra.png');
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 0;
 }
 
 .equipments-atributos {
+    background-color: white;
     font-size: 14px;
     color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #ccc;
-    background: #f9f9f9;
     border-radius: 8px;
     margin-top: 20px;
     margin: 0 auto;
@@ -1322,8 +1344,8 @@ footer a {
 }
 
 .equipments-coluna th {
+    font-weight: 400;
     text-align: left;
-    font-weight: bold;
     padding: 4px;
     color: #000;
 }
@@ -1331,7 +1353,7 @@ footer a {
 .equipments-coluna td {
     text-align: center;
     padding: 4px;
-    
+    font-weight: bold;
     color: #0066cc;
 }
 
@@ -3034,8 +3056,21 @@ select.donation-input option {
     }
 
     .equipments-equipamento-section {
+        background-color: transparent;
         flex-direction: column;
         align-items: center;
+    }
+
+    .equipments-equipamento-item .equipments-item-name {
+        color: white;
+    }
+
+    .equipments-equipamento-item-right .equipments-item-name-right  {
+        color: white;
+    }
+
+    #equipamentos {
+        background-color: transparent;
     }
 
     .equipments-equipamento-list {
