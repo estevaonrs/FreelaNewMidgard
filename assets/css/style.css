@@ -17,6 +17,7 @@
     --background-image-navbar: url('../images/bgdesktop.svg');
     --donation-background: rgba(255, 255, 255, 0.1); 
     --background-pass-color: url('../images/bgdesktop.svg');
+    --background-equipments: url('../images/bg-dark.png');
 }
 
 body.light-mode {
@@ -38,6 +39,7 @@ body.light-mode {
     --background-image-navbar: #8c4830;
     --donation-background: rgba(0, 0, 0, 0.1); 
     --background-pass-color: #063fb9;
+    --background-equipments: url('../images/bg-light.png');
 }
 
 
@@ -1047,7 +1049,7 @@ footer a {
 
 
 .grid-collection {
-    background-color: var(--background-colorfull);
+    background-image: var(--background-equipments);
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     padding: 4px; 
@@ -1089,10 +1091,21 @@ footer a {
 
 .equipments-tabs {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
-    gap: 10px;
+}
+
+.equipments-zeny {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.tab-buttons {
+    display: flex; 
+    gap: 10px; 
 }
 
 .tab-button {
@@ -1106,6 +1119,7 @@ footer a {
     transition: transform 0.3s ease;
     margin-top: 10px;
 }
+
 
 .tab-button.active {
     background-color: var(--text-active);
@@ -1164,7 +1178,28 @@ footer a {
 
 }
 
+.equipments-equipamento-list-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 30%;
+    min-height: 260px;
+
+}
+
 .equipments-equipamento-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.equipments-equipamento-item-right {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1179,9 +1214,24 @@ footer a {
     padding-bottom: 0;
 }
 
+.equipments-equipamento-item-right:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 .equipments-equipamento-item .equipments-item-name {
     flex-grow: 1;
-    text-align: center;
+    text-align: left;
+    margin: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+
+.equipments-equipamento-item-right .equipments-item-name-right {
+    flex-grow: 1;
+    text-align: right;
     margin: 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1191,8 +1241,19 @@ footer a {
 .equipments-equipamento-item .equipments-item-slot {
     width: 40px;
     height: 40px;
-    background-color: #4a4a4a;
-    border: 1px solid white;
+    background-color: #e4ecf4;
+    border: 3px solid #b3cce4;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.equipments-equipamento-item-right .equipments-item-slot-right {
+    width: 40px;
+    height: 40px;
+    background-color: #e4ecf4;
+    border: 2px solid #b3cce4;
     border-radius: 4px;
     display: flex;
     justify-content: center;
@@ -1200,6 +1261,12 @@ footer a {
 }
 
 .equipments-equipamento-item .equipments-item-slot img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+}
+
+.equipments-equipamento-item-right .equipments-item-slot-right img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 4px;
@@ -1219,42 +1286,62 @@ footer a {
 }
 
 .equipments-atributos {
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 8px;
     margin-top: 20px;
-}
-
-.equipments-atributos table {
+    margin: 0 auto;
     width: 100%;
-    border-collapse: collapse;
 }
 
-.equipments-atributos .equipments-coluna {
+.equipments-coluna {
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
 }
 
-.equipments-atributos .equipments-coluna div {
+.equipments-coluna div {
     width: 50%;
 }
 
-.equipments-atributos th {
-    text-align: left;
-    padding: 5px;
-    border: 1px solid white;
-    color: white;
+
+.equipments-coluna table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.equipments-atributos td {
-    text-align: center;
-    padding: 5px;
-    border: 1px solid white;
-    color: white;
+.equipments-coluna th {
+    text-align: left;
+    font-weight: bold;
+    padding: 4px;
+    color: #0066cc;
+}
 
+.equipments-coluna td {
+    text-align: center;
+    padding: 4px;
+    color: #333;
+}
+
+.equipments-coluna tr:not(:last-child) {
+    border-bottom: 1px solid #ccc;
 }
 
 .equipments-zeny {
-    text-align: right;
-    font-size: 18px;
     font-weight: bold;
+    color: white;
+    text-align: center;
     margin-top: 10px;
 }
 
@@ -2957,6 +3044,13 @@ select.donation-input option {
         min-height: auto;
         margin-bottom: 20px;
     }
+
+    .equipments-equipamento-list-right {
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+
 
     .equipments-equipamento-item {
         align-items: center;
