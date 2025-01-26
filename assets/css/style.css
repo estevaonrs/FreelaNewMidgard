@@ -1325,13 +1325,14 @@ footer a {
     text-align: left;
     font-weight: bold;
     padding: 4px;
-    color: #0066cc;
+    color: #000;
 }
 
 .equipments-coluna td {
     text-align: center;
     padding: 4px;
-    color: #333;
+    
+    color: #0066cc;
 }
 
 .equipments-coluna tr:not(:last-child) {
@@ -1344,8 +1345,6 @@ footer a {
     text-align: center;
     margin-top: 10px;
 }
-
-
 
 
 .columns-container {
