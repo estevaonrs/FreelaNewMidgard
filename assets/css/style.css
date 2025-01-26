@@ -15,6 +15,8 @@
     --background-image-body: url('../images/bgdesktop.svg');
     --background-navbar-color: rgb(28, 28, 52);
     --background-image-navbar: url('../images/bgdesktop.svg');
+    --donation-background: rgba(255, 255, 255, 0.1); 
+    --background-pass-color: url('../images/bgdesktop.svg');
 }
 
 body.light-mode {
@@ -34,6 +36,8 @@ body.light-mode {
     --background-image-body: white;
     --background-navbar-color: #8c4830;
     --background-image-navbar: #8c4830;
+    --donation-background: rgba(0, 0, 0, 0.1); 
+    --background-pass-color: #063fb9;
 }
 
 
@@ -849,6 +853,7 @@ footer a {
     align-items: center;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
+
 }
 
 .card-image {
@@ -857,6 +862,7 @@ footer a {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .card-image img {
@@ -874,19 +880,20 @@ footer a {
     align-items: center;
     justify-content: center; 
     width: 100%;
-    border-bottom: 2px solid #9c5ce4;
-
+    border-bottom: 2px solid var(--text-active);
+    background-color: var(--background-pass-color);
 }
 
 .card-content p {
     font-size: 0.7rem;
     margin: 0.3rem 0;
     text-align: center;
+    color: var(--text-background-colorful-color);
 }
 
 .card-content button {
-    background-color: #9c5ce4;
-    border: 2px solid white;
+    background-color: var(--button-colorfull);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     color: white;
     cursor: pointer;
@@ -898,7 +905,7 @@ footer a {
 }
 
 .card-content button:hover {
-    background-color: #8541c4;
+    background-color: var(--text-hover);
     border-color: #dcdcdc;
 }
 
@@ -919,7 +926,7 @@ footer a {
 
 .card-content .level {
     font-size: 0.7rem; 
-    color: #6c757d; 
+    color: white; 
     margin-bottom: 5px; 
     text-align: center; 
 }
@@ -1040,7 +1047,7 @@ footer a {
 
 
 .grid-collection {
-    background-color: #19192e;
+    background-color: var(--background-colorfull);
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     padding: 4px; 
@@ -1101,7 +1108,7 @@ footer a {
 }
 
 .tab-button.active {
-    background-color: #9c5ce4;
+    background-color: var(--text-active);
 }
 
 .tab-content {
@@ -1178,6 +1185,7 @@ footer a {
     margin: 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
+    color: white;
 }
 
 .equipments-equipamento-item .equipments-item-slot {
@@ -1231,13 +1239,16 @@ footer a {
 .equipments-atributos th {
     text-align: left;
     padding: 5px;
-    border: 1px solid #555;
+    border: 1px solid white;
+    color: white;
 }
 
 .equipments-atributos td {
     text-align: center;
     padding: 5px;
-    border: 1px solid #555;
+    border: 1px solid white;
+    color: white;
+
 }
 
 .equipments-zeny {
@@ -1258,9 +1269,9 @@ footer a {
 }
 
 .action-appearence-button {
-    background-color: #8541c4;
+    background-color: var(--button-colorfull);
     color: white;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     padding: 8px 20px;
     font-size: 0.9rem;
@@ -1270,7 +1281,7 @@ footer a {
 }
 
 .action-appearence-button:hover {
-    background-color: #6c34a1;
+    background-color: var(--text-hover);
     transform: scale(1.05);
 }
 
@@ -1359,7 +1370,7 @@ footer a {
 .modal-inner-content {
     background-color: white;
     padding: 20px;
-    border: 2px solid #8541c4; 
+    border: 2px solid var(--text-active); 
     border-radius: 15px; 
 }
 
@@ -1487,7 +1498,7 @@ footer a {
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: #19192e;
+    background-color: var(--background-navbar-color);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
@@ -1501,12 +1512,11 @@ footer a {
 }
 
 .message.active {
-    background-color: #1e2a4a;
-    border: 1px solid #4a90e2;
+    background-color: var(--text-active);
+    border: 1px solid var(--border-color);
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
 }
-
 
 .message-icon:hover {
     opacity: 0.8; 
@@ -1528,9 +1538,14 @@ footer a {
     color: white;
 }
 
+.message-title-detail {
+    font-weight: bold;
+    color: var(--text-background-color);
+}
+
 .message-date {
     font-size: 0.8rem;
-    color: #777;
+    color: white;
 }
 
 .message-details {
@@ -1554,13 +1569,11 @@ footer a {
 
 .message-details h3 {
     font-size: 16px;
-    color: white;
 }
 
 
 .message-subject {
     font-size: 16px;
-    color: white;
 }
 
 .attachments {
@@ -1589,7 +1602,6 @@ footer a {
 
 
 .attachment-name {
-    color: white;
     font-weight: bold;
     font-size: 14px; 
     margin-bottom: 5px; 
@@ -1597,7 +1609,6 @@ footer a {
 
 
 .attachment-quantity {
-    color: white;
     font-size: 12px; 
     font-weight: normal; 
 }
@@ -1998,7 +2009,7 @@ footer a {
 }
 
 .conquista-overall-progress-item img {
-    background-color: white;
+    background-color: var(--border-color);
     width: 30px;
     height: 30px;
     object-fit: cover;
@@ -2063,7 +2074,7 @@ footer a {
     display: flex;
     flex-direction: column;
     position: relative;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     background-color: #f9f9f9;
     overflow: hidden;
     width: 100%; 
@@ -2509,13 +2520,11 @@ footer a {
     display: block;
     font-size: 18px;
     font-weight: bold;
-    color: white;
     margin-bottom: 8px;
-    font-family: 'Arial', sans-serif;
 }
 
 .terms-link {
-    color: #9c5ce4;
+    color: var(--text-active);
     text-decoration: underline;
 }
 
@@ -2542,7 +2551,7 @@ footer a {
 
 .donation-conversion {
     font-size: 18px;
-    color: #9c5ce4;
+    color: var(--text-active);
     margin-top: 12px;
     font-weight: bold;
 }
@@ -2608,7 +2617,7 @@ select.donation-input option {
 .donation-rewards-dynamic h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: white;
+    color: var(--text-background-body-color);
 }
 
 .rewards-container {
@@ -2621,7 +2630,7 @@ select.donation-input option {
 .reward-item {
     flex: 1 1 calc(33.33% - 20px);
     max-width: calc(33.33% - 10px);
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     padding: 15px;
     text-align: center;
@@ -2638,6 +2647,7 @@ select.donation-input option {
 .reward-item p {
     margin: 5px 0;
     font-size: 16px;
+    color: var(--text-background-body-color);
 }
 
 .reward-item strong {
@@ -2645,18 +2655,17 @@ select.donation-input option {
 }
 
 .donation-first-bonus {
-    border: 2px solid white;
-    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--border-color);
+    background-color: var(--donation-background);
     padding: 20px;
     border-radius: 10px;
     margin-top: 30px;
-    color: white;
 }
 
 .donation-first-bonus h2 {
     font-size: 28px;
     margin-bottom: 10px;
-    color: white;
+    color: var(--text-background-body-color);
 }
 
 .donation-first-bonus p {
@@ -2687,7 +2696,7 @@ select.donation-input option {
 .note {
     font-size: 14px;
     margin-top: 15px;
-    color: #9c5ce4;
+    color: var(--text-active);
     font-style: italic;
 }
 
@@ -2708,7 +2717,7 @@ select.donation-input option {
     display: flex;
     flex-direction: column;
     position: relative;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
     box-sizing: border-box;
@@ -2758,13 +2767,13 @@ select.donation-input option {
     font-size: 14px; 
     font-weight: bold;
     margin: 0;
-    color: white;
+    color: var(--text-background-color);
 }
 
 .quest-item-info p {
     margin: 0;
     font-size: 12px; 
-    color: white;
+    color: var(--text-background-color);
 
 }
 
@@ -2775,7 +2784,7 @@ select.donation-input option {
     align-items: center;
     justify-content: center;
     gap: 5px;
-    border: 2px solid white;
+    border: 2px solid var(--border-color);
     padding: 5px; 
     border-radius: 8px;
     text-align: center;
@@ -2789,7 +2798,7 @@ select.donation-input option {
 .quest-counter-text {
     font-weight: bold;
     font-size: 12px; 
-    color: white;
+    color: var(--text-background-color);
 }
 
 
