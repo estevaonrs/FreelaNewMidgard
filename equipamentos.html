@@ -88,18 +88,21 @@
             <div class="collection-container">
                 <div class="grid-collection">
                     <div class="equipments-container">
-                        <div class="equipments-header">
-                            <img src="assets/images/logo.png" alt="Logo">
-                        </div>
-                            <div class="equipments-tabs">
-                                <div class="equipments-zeny">ZENY: 55,479</div>
-                                <div class="tab-buttons">
-                                    <button class="tab-button active" onclick="changeTab('equipamentos')">Equipamentos</button>
-                                    <button class="tab-button" onclick="changeTab('visuais')">Visuais</button>
+                            <div class="equipments-header">
+                                <img src="assets/images/logo.png" alt="Logo">
+                            </div>
+                            <div class="tabs">
+                                <div class="tab-container">
+                                    <div class="tab active" onclick="changeTab('equipamentos')">Equipamentos</div>
+                                    <div class="tab" onclick="changeTab('visuais')">Visuais</div>
+                                </div>
+                                <div class="equipments-zeny">
+                                    <span class="zeny-label">ZENY:</span>
+                                    <span class="zeny-value">55,479</span>
                                 </div>
                             </div>
-
-                            <div id="equipamentos" class="tab-content active">  
+                            <div id="equipamentos" class="tab-content active">
+                                <h2 class="equipments-titulo">Equipamentos</h2>
                                 <div class="equipments-equipamento-section">
                                     <div class="equipments-equipamento-list">
                                         <div class="equipments-equipamento-item">
@@ -108,45 +111,50 @@
                                         </div>
                                         <div class="equipments-equipamento-item">
                                             <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Chapéu Topo"></div>
-                                            <div class="equipments-item-name">Chapéu Topo</div>
+                                            <div class="equipments-item-name">Chapéu Baixo</div>
                                         </div>
                                         <div class="equipments-equipamento-item">
                                             <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Chapéu Topo"></div>
-                                            <div class="equipments-item-name">Chapéu Topo</div>
+                                            <div class="equipments-item-name">Mão Direita</div>
                                         </div>
                                         <div class="equipments-equipamento-item">
                                             <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Chapéu Topo"></div>
-                                            <div class="equipments-item-name">Chapéu Topo</div>
+                                            <div class="equipments-item-name">Capa</div>
                                         </div>
                                         <div class="equipments-equipamento-item">
                                             <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Chapéu Topo"></div>
-                                            <div class="equipments-item-name">Chapéu Topo</div>
+                                            <div class="equipments-item-name">Acessório Direito</div>
                                         </div>
                                     </div>
                                     <div class="equipments-personagem">
+                                        <div class="equipments-nome-personagem">estevaonrs</div>
                                         <img src="assets/images/11.gif" alt="Personagem">
                                     </div>
                                     <div class="equipments-equipamento-list-right">
                                         <div class="equipments-equipamento-item-right">
-                                            <div class="equipments-item-name-right">Armadura</div>
+                                            <div class="equipments-item-name-right">Chapéu Meio</div>
                                             <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
                                         </div>
                                         <div class="equipments-equipamento-item-right">
                                             <div class="equipments-item-name-right">Armadura</div>
                                             <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
-                                        </div><div class="equipments-equipamento-item-right">
-                                            <div class="equipments-item-name-right">Armadura</div>
+                                        </div>
+                                        <div class="equipments-equipamento-item-right">
+                                            <div class="equipments-item-name-right">Mão Esquerda</div>
                                             <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
-                                        </div><div class="equipments-equipamento-item-right">
-                                            <div class="equipments-item-name-right">Armadura</div>
+                                        </div>
+                                        <div class="equipments-equipamento-item-right">
+                                            <div class="equipments-item-name-right">Sapatos</div>
                                             <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
-                                        </div><div class="equipments-equipamento-item-right">
-                                            <div class="equipments-item-name-right">Armadura</div>
+                                        </div>
+                                        <div class="equipments-equipamento-item-right">
+                                            <div class="equipments-item-name-right">Acessório Esquerdo</div>
                                             <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="equipments-atributos">
+                                    <h2 class="atributos-titulo">Atributos</h2>
                                     <div class="equipments-coluna">
                                         <div>
                                             <table>
@@ -167,59 +175,59 @@
                             </div>
 
                             <div id="visuais" class="tab-content">
-                                <div class="equipments-header">
-                                    <img src="assets/images/logo.png" alt="Logo">
-                                </div>
+                                <h2 class="equipments-titulo">Visuais</h2>
                                 <div class="equipments-equipamento-section">
                                     <div class="equipments-equipamento-list">
                                         <div class="equipments-equipamento-item">
                                             <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Chapéu Topo"></div>
-                                            <div class="equipments-item-name">Visual Topo</div>
+                                            <div class="equipments-item-name">Chapéu Topo</div>
                                         </div>
                                         <div class="equipments-equipamento-item">
                                             <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Chapéu Topo"></div>
-                                            <div class="equipments-item-name">Visual Topo</div>
+                                            <div class="equipments-item-name">Chapéu Baixo</div>
                                         </div>
                                         <div class="equipments-equipamento-item">
                                             <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Chapéu Topo"></div>
-                                            <div class="equipments-item-name">Visual Topo</div>
+                                            <div class="equipments-item-name">Mão Direita</div>
                                         </div>
                                         <div class="equipments-equipamento-item">
                                             <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Chapéu Topo"></div>
-                                            <div class="equipments-item-name">Visual Topo</div>
+                                            <div class="equipments-item-name">Capa</div>
                                         </div>
                                         <div class="equipments-equipamento-item">
                                             <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Chapéu Topo"></div>
-                                            <div class="equipments-item-name">Visual Topo</div>
+                                            <div class="equipments-item-name">Acessório Direito</div>
                                         </div>
                                     </div>
                                     <div class="equipments-personagem">
-                                        <img src="assets/images/11.gif" alt="Visuais Personagem">
+                                        <div class="equipments-nome-personagem">estevaonrs</div>
+                                        <img src="assets/images/11.gif" alt="Personagem">
                                     </div>
-                                    <div class="equipments-equipamento-list">
-                                        <div class="equipments-equipamento-item">
-                                            <div class="equipments-item-name">Visual Topo</div>
-                                            <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Armadura"></div>
+                                    <div class="equipments-equipamento-list-right">
+                                        <div class="equipments-equipamento-item-right">
+                                            <div class="equipments-item-name-right">Chapéu Meio</div>
+                                            <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
                                         </div>
-                                        <div class="equipments-equipamento-item">
-                                            <div class="equipments-item-name">Visual Topo</div>
-                                            <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Armadura"></div>
+                                        <div class="equipments-equipamento-item-right">
+                                            <div class="equipments-item-name-right">Armadura</div>
+                                            <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
                                         </div>
-                                        <div class="equipments-equipamento-item">
-                                            <div class="equipments-item-name">Visual Topo</div>
-                                            <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Armadura"></div>
+                                        <div class="equipments-equipamento-item-right">
+                                            <div class="equipments-item-name-right">Mão Esquerda</div>
+                                            <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
                                         </div>
-                                        <div class="equipments-equipamento-item">
-                                            <div class="equipments-item-name">Visual Topo</div>
-                                            <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Armadura"></div>
+                                        <div class="equipments-equipamento-item-right">
+                                            <div class="equipments-item-name-right">Sapatos</div>
+                                            <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
                                         </div>
-                                        <div class="equipments-equipamento-item">
-                                            <div class="equipments-item-name">Visual Topo</div>
-                                            <div class="equipments-item-slot"><img src="assets/images/items/1363.png" alt="Armadura"></div>
+                                        <div class="equipments-equipamento-item-right">
+                                            <div class="equipments-item-name-right">Acessório Esquerdo</div>
+                                            <div class="equipments-item-slot-right"><img src="assets/images/items/1363.png" alt="Armadura"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </div>
 
                 </div>
@@ -298,16 +306,15 @@
             toggle.classList.toggle('active');
         }
 
-        function changeTab(tabName) {
-            const tabs = document.querySelectorAll('.tab-button');
-            const contents = document.querySelectorAll('.tab-content');
+        function changeTab(tabId) {
+    // Remover a classe "active" de todas as abas
+    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
 
-            tabs.forEach(tab => tab.classList.remove('active'));
-            contents.forEach(content => content.classList.remove('active'));
-
-            document.querySelector(`.tab-button[onclick="changeTab('${tabName}')"]`).classList.add('active');
-            document.getElementById(tabName).classList.add('active');
-        }
+    // Adicionar a classe "active" na aba e no conteúdo selecionados
+    document.querySelector(`.tab[onclick="changeTab('${tabId}')"]`).classList.add('active');
+    document.getElementById(tabId).classList.add('active');
+}
 
     </script>
 </body>
