@@ -307,14 +307,12 @@
         }
 
         function changeTab(tabId) {
-    // Remover a classe "active" de todas as abas
-    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
 
-    // Adicionar a classe "active" na aba e no conteúdo selecionados
-    document.querySelector(`.tab[onclick="changeTab('${tabId}')"]`).classList.add('active');
-    document.getElementById(tabId).classList.add('active');
-}
+            document.querySelector(`.tab[onclick="changeTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
 
     </script>
 </body>

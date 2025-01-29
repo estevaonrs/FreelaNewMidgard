@@ -564,6 +564,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
     gap: 16px; 
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .subaccount-card {
@@ -637,7 +638,6 @@ body {
     width: 30px; 
     height: 30px;
     padding: 4px; 
-    z-index: 2; 
 }
 
 .subaccount-card .info {
@@ -846,6 +846,7 @@ footer a {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 1rem;
+    margin-bottom: 20px;
 }
   
 .card {
@@ -1049,8 +1050,8 @@ footer a {
 
 
 .grid-collection {
-    background-image: var(--background-equipments);
-    border-radius: 8px; 
+    background-color: white;
+    border-radius: 0px 0px 8px 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     padding: 4px; 
     gap: 4px;
@@ -1066,7 +1067,7 @@ footer a {
     background: none; 
     padding: 5px;
     gap: 10px; 
-    border-bottom: 1px solid #000; 
+    border-bottom: 1px solid #eaeaea; 
     padding-bottom: 10px;
 }
 
@@ -1081,13 +1082,44 @@ footer a {
 .item-name-collection {
     font-size: 14px; 
     font-weight: bold;
-    color: white;
+    color: black;
 }
 
 .item-quantity-collection {
     font-size: 14px; 
-    color: white;
+    color: black;
 }
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    padding: 5px;
+    border-radius: 8px 0px 0px 8px;
+    background-color: white;
+    font-size: 14px;
+    border: 1px solid var(--button-colorfull);
+    border-right: 0;
+    flex-grow: 1;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#search-button {
+    padding: 5px;
+    border-radius: 0px 8px 8px 0px;
+    background-color: var(--button-colorfull);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid var(--button-colorfull);
+    border-left: 0;
+    height: 100%;
+}
+
 
 .tabs {
     display: flex;
@@ -1119,7 +1151,7 @@ footer a {
 }
 
 .tab {
-    padding: 10px 20px;
+    padding: 4px 8px;
     cursor: pointer;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -1183,7 +1215,13 @@ footer a {
 }
 
 #equipamentos {
-    background-color: white;
+    margin-bottom: 40px;
+
+}
+
+#visuais {
+    margin-bottom: 40px;
+
 }
 
 .equipments-container {
@@ -1384,7 +1422,6 @@ footer a {
     padding: 5px 10px;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 2;
     text-align: center;
     border: 1px solid #ccc;
 }
@@ -1921,7 +1958,6 @@ footer a {
     right: 16px;
     width: 32px;
     height: 32px;
-    z-index: 2;
 }
 
 .info {
@@ -2036,10 +2072,6 @@ footer a {
     font-weight: bold;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     margin: 0;
-}
-
-.table-body {
-    padding: 4px;
 }
 
 
@@ -2653,12 +2685,14 @@ footer a {
 }
 
 .vote-table-item {
+    position: relative;
     text-align: center;
-    border: 2px solid var(--border-color);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
+    overflow: hidden;
+    text-decoration: none;
+
 }
 
 .vote-table-item img {
@@ -2671,6 +2705,47 @@ footer a {
 .vote-table-item p {
     font-size: 16px;
     margin: 0;
+    color: var(--text-background-body-color);
+}
+
+.vote-table-item a {
+    text-decoration: none;
+}
+
+.vote-table-item.voted {
+    pointer-events: none;
+    background-color: #d3d3d3;
+    opacity: 0.6;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.vote-table-item.voted img {
+    filter: grayscale(100%);
+}
+
+.overlay-timer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.overlay-timer span {
+    animation: fade-in-out 1s ease-in-out infinite;
+}
+
+@keyframes fade-in-out {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 
@@ -2700,6 +2775,10 @@ footer a {
 .donation-field {
     margin-bottom: 20px;
     text-align: left;
+}
+
+.donation-cta-container {
+    text-align: right;
 }
 
 .donation-field label {
@@ -2892,18 +2971,18 @@ select.donation-input option {
     grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
     gap: 10px;
     justify-content: start;
-    padding: 5px;
+    margin-bottom: 20px;
 }
 
 
 .quest-item {
     border-radius: 10px;
+    background-color: #f9f9f9;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     position: relative;
-    border: 2px solid var(--border-color);
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
     box-sizing: border-box;
@@ -2953,16 +3032,15 @@ select.donation-input option {
     font-size: 14px; 
     font-weight: bold;
     margin: 0;
-    color: var(--text-background-color);
+    color: #333;
 }
 
 .quest-item-info p {
     margin: 0;
     font-size: 12px; 
-    color: var(--text-background-color);
+    color: #777;
 
 }
-
 
 .quest-counter-bg {
     display: flex;
@@ -2970,7 +3048,7 @@ select.donation-input option {
     align-items: center;
     justify-content: center;
     gap: 5px;
-    border: 2px solid var(--border-color);
+    background-color: #eaeaea;
     padding: 5px; 
     border-radius: 8px;
     text-align: center;
@@ -2984,7 +3062,7 @@ select.donation-input option {
 .quest-counter-text {
     font-weight: bold;
     font-size: 12px; 
-    color: var(--text-background-color);
+    color: #000;
 }
 
 
@@ -3125,6 +3203,27 @@ select.donation-input option {
         display: none;
     }
 
+    .tabs {
+        flex-direction: column; /* Empilha os elementos */
+        align-items: stretch; /* Faz ocupar a largura toda */
+    }
+
+    .tab-container {
+        flex-wrap: wrap; /* Permite que os botões das tabs quebrem linha se necessário */
+        justify-content: center;
+    }
+
+    .search-bar {
+        width: 100%; /* Faz a barra de pesquisa ocupar toda a largura */
+        justify-content: center; /* Centraliza os itens dentro */
+        margin-top: 5px; /* Espaçamento entre as tabs e a busca */
+    }
+
+    #search-input {
+        flex-grow: 1; /* Faz o input se expandir dentro do container */
+        width: 100%;
+    }
+
     .equipments-tabs {
         margin-top: 0px;
         gap: 10px;
@@ -3161,7 +3260,6 @@ select.donation-input option {
         padding: 5px 10px;
         border-radius: 8px;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-        z-index: 2;
         text-align: center;
     }
 
@@ -3453,7 +3551,6 @@ select.donation-input option {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         gap: 10px;
         justify-content: start;
-        width: 100%;
     }
 
     .quest-item {
@@ -3934,7 +4031,6 @@ select.donation-input option {
         right: 16px;
         width: 24px;
         height: 24px;
-        z-index: 2;
     }
     
     .character-card:hover {
