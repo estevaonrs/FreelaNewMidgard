@@ -2567,14 +2567,14 @@ footer a {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    border: 2px solid var(--border-color);
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 10px;            
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
     transition: transform 0.3s ease-in-out;
     position: relative;
     box-sizing: border-box;
+    border: 1px solid var(--border-color);
 }
 
 
@@ -2587,12 +2587,8 @@ footer a {
 }
 
 .indication-reward-details {
-    display: flex;
-    flex-direction: column;
     align-items: center;
     position: relative;
-    flex: 1 1 25%;
-    max-width: 80px;
 }
 
 .indication-reward-details img {
@@ -2628,7 +2624,7 @@ footer a {
 }
 
 .indication-info span {
-    font-size: 14px;
+    font-size: 20px;
     color: var(--text-background-body-color);
     font-weight: bold;
 }
