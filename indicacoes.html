@@ -82,242 +82,96 @@
                     <div class="conquista-overall-progress-bar" style="width: 1%;"></div>
                 </div>
                 <span class="conquista-overall-progress-percentage">10%</span>
+            </div>
 
-                <div class="grid-indication">
-                    <div id="rescueIndicationModal" class="modal">
-                        <div class="modal-content">
-                            <div class="modal-inner-content">
-                                <img src="assets/images/swal-success.png" alt="Sucesso" class="modal-success-image">
-                                <p class="modal-question">Item resgatado com sucesso.</p>
-                                <div class="modal-buttons">
-                                    <button class="action-appearence-button" onclick="closeModal('rescueIndicationModal')">Legal!</button>
-                                </div>
-                            </div>
+            <div class="conquista-content">
+                <div class="conquista-item" onclick="openModal('indicationModal')">
+                    <div class="conquista-item-container">
+                        <img src="assets/images/Esfera.gif" alt="Conquista" class="conquista-item-img">
+                        <div class="conquista-item-info">
+                            <h3>10 Indicações necessárias</h3>
+                            <p>Clique para saber quais recompensas você pode ganhar!</p>
+                        </div>
+                        <div class="conquista-counter-bg">
+                            <img src="assets/images/closed-box.png" alt="Counter" class="conquista-counter-img">
+                            <div class="conquista-counter-text">Resgate</div>
                         </div>
                     </div>
+                    <div class="conquista-progress-wrapper">
+                        <div class="conquista-progress-bar-container">
+                            <div class="conquista-progress-bar" style="width: 0%;"></div>
+                        </div>
+                        <span class="conquista-progress-counter">0/10</span>
+                    </div>
+                </div> 
+            </div>
 
-                    <div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-
-                            
-                        </div>  
-                        <div class="indication-info">
-                            <span>10 Indicações necessárias</span>
-                            <button class="header-button" id="btn-rescue-indication-1" onclick="openModal('rescueIndicationModal', 'btn-rescue-indication-1')">Resgatar</button>
-                        </div>
-                    </div>  
-                    <div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <div class="indication-info">
-                            <span>10 Indicações necessárias</span>
-                            <button class="header-button" id="btn-rescue-indication-1" onclick="openModal('rescueIndicationModal', 'btn-rescue-indication-1')">Resgatar</button>
-                        </div>
-                    </div>  
-                    <div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/664.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/642.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <div class="indication-info">
-                            <span>10 Indicações necessárias</span>
-                            <button class="header-button" id="btn-rescue-indication-1" onclick="openModal('rescueIndicationModal', 'btn-rescue-indication-1')">Resgatar</button>
-                        </div>
-                    </div>  <div class="indication-reward">
-                        <div class="indication-reward-details-container">
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/221.png" alt="Coin">
-                                <div>20</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/584.png" alt="Book">
-                                <div>1</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/571.png" alt="Diamond">
-                                <div>50</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/624.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/664.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                            <div class="indication-reward-details">
-                                <img src="assets/images/items/642.png" alt="Gear">
-                                <div>5</div>
-                            </div>
-                        </div>  
-                        <div class="indication-info">
-                            <span>10 Indicações necessárias</span>
-                            <button class="header-button" id="btn-rescue-indication-1" onclick="openModal('rescueIndicationModal', 'btn-rescue-indication-1')">Resgatar</button>
-                        </div>
-                    </div>               
+            <div id="indicationModal" class="conquista-modal">
+                <div class="conquista-modal-header">
+                    <h3>Resgate seus prêmios</h3>
+                    <div class="conquista-badge completed"></div>
+                    <span id="closeModal" class="close-btn">X</span>
                 </div>
-                
-                <div class="donation-rewards">
-                    <h2>Indicações Realizadas</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Nome</th>
-                                <th>Data</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <img src="assets/images/cabeca.png" alt="Brinde 1" class="donation-reward-img">
-                                    <p>estevaonrs</p>
-                                </td>
-                                <td>24/05/2014</td>
-                                <td>Válido</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <img src="assets/images/cabeca.png" alt="Brinde 2" class="donation-reward-img">
-                                    <p>DarkHero</p>
-                                </td>
-                                <td>21/01/2025</td>
-                                <td>Validando</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="conquista-modal-body">
+                    <p>Itens Disponíveis:</p>
+                </div>
+                <div class="indication-modal-footer">
+                    <span>●<img src="assets/images/items/221.png" alt="Coin">20x Coin </span>
+                </div>
+                <div class="indication-modal-footer">
+                    <span>●<img src="assets/images/items/221.png" alt="Coin">30x Coin </span>
+                </div>
+                <div class="indication-modal-footer">
+                    <span>●<img src="assets/images/items/221.png" alt="Coin">40x Coin </span>
+                </div>
+                <div class="indication-modal-footer">
+                    <span>●<img src="assets/images/items/221.png" alt="Coin">50x Coin </span>
+                </div>
+                <div class="indication-modal-footer">
+                    <span>●<img src="assets/images/items/221.png" alt="Coin">60x Coin </span>
+                </div>
+                <div class="indication-modal-footer">
+                    <span>●<img src="assets/images/items/221.png" alt="Coin">70x Coin </span>
+                </div>
+
+                <div class="conquista-modal-button-container">
+                    <button class="conquista-header-button" id="btn-rescue-conquista" onclick="resgatarConquista()">Resgatar</button>
                 </div>
             </div>
+
+            <div class="donation-rewards">
+                <h2>Indicações Realizadas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Data</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="assets/images/cabeca.png" alt="Brinde 1" class="donation-reward-img">
+                                <p>estevaonrs</p>
+                            </td>
+                            <td>24/05/2014</td>
+                            <td>Válido</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="assets/images/cabeca.png" alt="Brinde 2" class="donation-reward-img">
+                                <p>DarkHero</p>
+                            </td>
+                            <td>21/01/2025</td>
+                            <td>Validando</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            
         </div>
     </div>
 
@@ -385,6 +239,7 @@
             }
         })
 
+
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             const toggle = document.querySelector('.menu-toggle');
@@ -392,29 +247,48 @@
             toggle.classList.toggle('active');
         }
 
-        function openModal(modalId, buttonId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                document.getElementById(modalId).style.display = 'flex';
-                currentButtonId = buttonId;
-            }
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdown = document.querySelector('.dropdown'); 
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
         }
 
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.style.display = 'none';
-            }
+        function hideModal() {
+            document.getElementById('indicationModal').style.display = 'none';
+        }
 
-            if (currentButtonId) {
-                const button = document.getElementById(currentButtonId);
-                if (button) {
-                    button.textContent = 'Resgatado';
-                    button.className = 'rescued';
-                    button.onclick = null;
-                }
+        document.addEventListener('DOMContentLoaded', function () {
+            const closeModal = document.getElementById('closeModal');
+            const modal = document.getElementById('indicationModal');
+
+            if (closeModal && modal) {
+                closeModal.addEventListener('click', function () {
+                    modal.style.display = 'none';
+                });
+            }
+        });
+
+
+        function resgatarConquista() {
+            const button = document.getElementById('btn-rescue-conquista');
+            const counterText = document.querySelector('.conquista-counter-text');
+            const counterImg = document.querySelector('.conquista-counter-img');
+            
+            button.textContent = 'Resgatado';
+            button.className = 'rescued';
+            button.onclick = null;
+            
+            if (counterText) {
+                counterText.textContent = 'Resgatado';
+            }
+            
+            if (counterImg) {
+                counterImg.src = 'assets/images/open-box.png';
+                counterImg.alt = 'Open Box';
             }
         }
+        
 
     </script>
 </body>

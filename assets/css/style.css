@@ -850,30 +850,52 @@ footer a {
 }
   
 .card {
+    position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
-
+    border-radius: 8px;
 }
 
-.card-image {
-    background-color: white;
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
+}
+
+
+.overlay-icon-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 8px;
+}
 
+.overlay-icon {
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
 }
 
 .card-image img {
     width: auto;
-    height: 100%;
+    height: 90%;
 }
 
 .card-content {
+    position: relative;
     background-image: url('../images/bgdesktop.svg');
     background-repeat: no-repeat;
     background-position: top;
@@ -885,6 +907,28 @@ footer a {
     width: 100%;
     border-bottom: 2px solid var(--text-active);
     background-color: var(--background-pass-color);
+    z-index: 2;
+}
+
+.card-image {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image .level {
+    position: absolute;
+    top: 2px; 
+    right: 7px; 
+    font-size: 0.8rem; 
+    margin: 0;
+    z-index: 2; 
+    color: black;
+    font-weight: 600;
+
 }
 
 .card-content p {
@@ -892,6 +936,7 @@ footer a {
     margin: 0.3rem 0;
     text-align: center;
     color: var(--text-background-colorful-color);
+    font-weight: 600;
 }
 
 .card-content button {
@@ -927,12 +972,6 @@ footer a {
     border-color: whitesmoke;
 }
 
-.card-content .level {
-    font-size: 0.7rem; 
-    color: white; 
-    margin-bottom: 5px; 
-    text-align: center; 
-}
 
 .title-container {
     display: flex;
@@ -1006,6 +1045,7 @@ footer a {
     width: 100%;
     margin: 0 auto;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -2463,7 +2503,6 @@ footer a {
     padding: 20px;
     border: 1px solid #ddd;
     z-index: 9999;
-    height: 200px;
 }
 
 .conquista-modal-header {
@@ -2541,6 +2580,33 @@ footer a {
 
 .conquista-modal-footer span {
     display: block;
+}
+
+.indication-modal-footer {
+    font-size: 14px;
+    color: #3a4fa0;
+    border-top: 1px dashed #e0e0e0;
+    padding-top: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.indication-modal-footer span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #eaf0ff;
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.conquista-modal-footer img {
+    width: 24px;
+    height: 24px;
 }
 
 
@@ -3518,7 +3584,6 @@ select.donation-input option {
     }
 
     .conquista-item {
-        height: 110px;
         border-radius: 10px;
         padding: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
